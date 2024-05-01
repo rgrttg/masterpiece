@@ -11,3 +11,11 @@ Brainstorming machen.
 #### Do 25.04.2024
 Recherche: Wordpress-Plugin.
 Ordner umbenannt, RETROSPECTIVE.md hinzugefügt.
+#### Fr 26.04.2024
+Nix (Filme für Touch for Health-Verein hochgeladen)
+#### Sa 27.04.2024
+Mindmap
+Phasenplan
+#### Mo 29.04.2024
+Funktionen
+### 2.Woche
