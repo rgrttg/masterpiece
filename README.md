@@ -233,7 +233,7 @@ docker rm $(docker ps -a -q)
 
 ### 3. Storage Folder Permission Problem
 
-1. Versuche sail up ohne ache zu starten
+1. Versuche sail up ohne Cache zu starten
 
 ```bash
 sail build --no-cache
