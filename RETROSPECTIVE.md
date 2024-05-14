@@ -35,3 +35,21 @@ Recherche tsdav
 #### Mo 06.05.2024
 Figma Kosmetik,
 Figma Prototype
+
+## Designphase
+### 3.Woche
+#### Di 07.05.2024
+Arbeitsplatz einrichten.
+Deployment.
+Objekt-Modellierung.
+Meeting w/Chris,
+Planung Phase 2
+#### Mi 08.05.2024
+Figma Homepage
+#### Do 09.05.2024
+Krank
+#### So 12.05.2024
+Nix (Buchhaltung für IK-K fertig gemacht)
+#### Mo 13.05.2024
+Figma Homepage,
+Figma Bestätigung
