@@ -14,23 +14,24 @@ Ordner umbenannt, RETROSPECTIVE.md hinzugefügt.
 #### Fr 26.04.2024
 Nix (Filme für Touch for Health-Verein hochgeladen)
 #### Sa 27.04.2024
-Mindmap
+Mindmap,
 Phasenplan
 #### Mo 29.04.2024
 Funktionen
+
 ### 2.Woche
 #### Di 30.04.2024
 Figma-Skizze
 #### Mi 01.05.2024
 Figma Termin-Wahl
 #### Do 02.05.2024
-Figma Buchung-Personalien
+Figma Buchung-Personalien.
 Recherche Datepicker
 #### Fr 03.05.2024
 Recherche iCal, calDAV
 #### Sa 04.05.2024
-Figma Buchung-Thema
+Figma Buchung-Thema.
 Recherche tsdav
 #### Mo 06.05.2024
-Figma Kosmetik
+Figma Kosmetik,
 Figma Prototype
