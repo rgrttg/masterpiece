@@ -16,14 +16,44 @@ class ClientSeeder extends Seeder
     {
         //
         Client::create([
-            'firstname' => 'Ani',
-            'lastname' => 'Hagi',
-            'email' => 'ah@bh.ch',
-            'phone' => '0041 41 414 14 14',
-            'subject' => 'Test-Thema',
-            'street' => 'Talstrasse 1',
-            'city' => '8000 Zürich',
-            'birthdate' => '1978-08-07'
+            'firstname' => 'Gwyneth',
+            'lastname' => 'Paltrow',
+            'email' => 'gwyneth@paltrow.com',
+            'phone' => '1',
+            'subject' => 'Iron Man',
+            'street' => 'Sunset Boulevard',
+            'city' => '90210 Los Angeles',
+            'birthdate' => '1972-09-27'
+        ]);        
+        Client::create([
+            'firstname' => 'Kate',
+            'lastname' => 'Winslet',
+            'email' => 'kate@winslet.com',
+            'phone' => '2',
+            'subject' => 'Titanic',
+            'street' => 'Kings Road',
+            'city' => 'Reading, Berkshire ',
+            'birthdate' => '1975-10-05'
+        ]);        
+        Client::create([
+            'firstname' => 'Scarlett',
+            'lastname' => 'Johansson',
+            'email' => 'scarlett@johansson.com',
+            'phone' => '3',
+            'subject' => 'Vicky Cristina Barcelona',
+            'street' => 'Broadway',
+            'city' => 'New York City',
+            'birthdate' => '1984-11-12'
+        ]);        
+        Client::create([
+            'firstname' => 'Keira',
+            'lastname' => 'Knightly',
+            'email' => 'keira@knightly.com',
+            'phone' => '4',
+            'subject' => 'The Imitation Game',
+            'street' => 'Bondstreet',
+            'city' => 'London',
+            'birthdate' => '1985-03-26'
         ]);        
     }
 }
