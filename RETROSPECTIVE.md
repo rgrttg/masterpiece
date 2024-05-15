@@ -53,3 +53,14 @@ Nix (Buchhaltung für IK-K fertig gemacht)
 #### Mo 13.05.2024
 Figma Homepage,
 Figma Bestätigung
+### 4.Woche
+#### Di 14.05.2024
+Users & Permissions,
+Storage Folder Permission Problem.
+Meetin w/Chris.
+Datenbase migration,
+Make Model Client: fillable gefüllt
+#### Mi 15.05.2024
+Figma Homepage.
+Neues Trello Board erstellt, geteilt, Tasks verschoben.
+Make Seeder ClientSeeder
