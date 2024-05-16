@@ -64,3 +64,7 @@ Make Model Client: fillable gefüllt
 Figma Homepage.
 Neues Trello Board erstellt, geteilt, Tasks verschoben.
 Make Seeder ClientSeeder
+#### Do 16.05.2024
+Make Model Employee
+Make Model Appointment
+Beide Seeder gefüllt
