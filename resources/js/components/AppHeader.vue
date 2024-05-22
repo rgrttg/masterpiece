@@ -22,14 +22,18 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
   align-items: center;
   background-color: var(--color-background-header);
+  min-height: 180px;
 }
 .links {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  gap: 64px;
   justify-content: space-between;
   align-items: right;
 }
