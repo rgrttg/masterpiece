@@ -8,14 +8,15 @@
 
 /* semantic color variables for this project */
 :root {
-  --color-background-item: var(--blau);
-  --color-background-soft: var(--hellgrau);
-  --color-background-footer: var(--weiss);
+  --color-background-header: var(--dunkelgrün);
+  --color-background-heading: var(--hellgrün);
+  --color-background-main: var(--dunkelgrün);
+  --color-background-footer: var(--hellgrün);
 
   --color-border: var(--weiss);
   
-  --color-heading-1: var(--schwarz);
-  --color-heading-2: var(--dunkelgrau);
+  --color-heading-1: var(--dunkelgrün);
+  --color-heading-2: var(--rot);
   --color-card-date: var(--rot);
   --color-card-text: var(--rosa);
 
