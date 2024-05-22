@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue'
+import AppFooter from '@/components/AppFooter.vue'
+
 </script>
 
 <template>
@@ -18,7 +20,7 @@ import { ref } from 'vue'
 
 <!-- Footer -->
 <footer>
-
+  <AppFooter />
 </footer>
 </template>
 
