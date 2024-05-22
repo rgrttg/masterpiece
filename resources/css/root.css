@@ -1,0 +1,23 @@
+/* color palette from  */
+:root {
+  --schwarz: #323D4A;
+  --hellgrün: #E9F2DA;
+  --dunkelgrün: #9CBC64;
+  --gelb: #DEE86F;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background-item: var(--blau);
+  --color-background-soft: var(--hellgrau);
+  --color-background-footer: var(--weiss);
+
+  --color-border: var(--weiss);
+  
+  --color-heading-1: var(--schwarz);
+  --color-heading-2: var(--dunkelgrau);
+  --color-card-date: var(--rot);
+  --color-card-text: var(--rosa);
+
+  --section-gap: 160px;
+}
