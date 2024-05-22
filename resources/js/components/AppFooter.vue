@@ -1,5 +1,5 @@
 <template>
-  <div class="banner">
+  <div class="fuss">
     <div class="one"> 
       <!-- Minimale Copyright Angaben -->
       (C) 2024
@@ -11,7 +11,7 @@
 </template>
 
 <style scoped>
-.banner {
+.fuss {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
