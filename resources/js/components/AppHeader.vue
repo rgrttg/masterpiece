@@ -1,5 +1,5 @@
 <template>
-  <div class="kopfzeile">
+  <div class="kopf">
     <div class="logo">
       <img alt="Website-Logo" src="" height="180"/>
     </div>
@@ -18,7 +18,7 @@
 </template>
 
 <style scoped>
-.kopfzeile {
+.kopf {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
