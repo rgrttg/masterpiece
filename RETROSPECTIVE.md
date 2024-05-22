@@ -68,3 +68,15 @@ Make Seeder ClientSeeder
 Make Model Employee
 Make Model Appointment
 Beide Seeder gefüllt
+#### Fr 17.05.2024
+Krank
+#### Mo 20.05.2024
+Pfingsten
+### 5.Woche
+#### Di 21.05.2024
+S.A.D.
+#### Mi 22.05.2024
+Home.vue
+AppFooter.vue
+AppHeader.vue
+root.css
