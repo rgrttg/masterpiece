@@ -22,3 +22,9 @@
 
   --section-gap: 160px;
 }
+
+body {
+  font-family:
+    Quicksand,
+    sans-serif;
+  }
