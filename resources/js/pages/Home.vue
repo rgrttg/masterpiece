@@ -1,37 +1,26 @@
 <script setup>
 import { ref } from 'vue'
 import AppHeader from '../components/AppHeader.vue';
+import MainCard from '../components/MainCard.vue';
 import AppFooter from '../components/AppFooter.vue';
 
 </script>
 
 <template>
-  <!-- Header -->
-  <header>
-    <AppHeader />
-  </header>
-  
-  <!-- Main -->
-  <main>
-    <div class="haupt">
+    <!-- Header -->
+    <header>
+      <AppHeader />
+    </header>
+
+    <!-- Main -->
+    <main>
       <h1>Deine Kinesiologie-Praxis in Hedingen und Urdorf</h1>
-      <router-link to="/login">Link zur Login Seite</router-link>
-    </div>
-  </main>
-  
-  <!-- Footer -->
-  <footer>
-    <AppFooter />
-  </footer>
+
+      <MainCard />
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+      <AppFooter />
+    </footer>
 </template>
-
-<style scoped>
-main {
-  background-color: var(--color-background-main);
-}
-
-h1 {
-  color: var(--color-heading-1);
-  background-color: var(--color-background-heading);
-}
-</style>
