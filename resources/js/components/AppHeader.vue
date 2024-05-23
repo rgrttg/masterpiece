@@ -3,7 +3,7 @@
     <div class="logo">
       <img alt="Website-Logo" src="" height="180"/>
     </div>
-    <div class="links">
+    <div class="rechts">
       <div>
         Home
       </div>
@@ -12,6 +12,9 @@
       </div>
       <div>
         Über mich
+      </div>
+      <div>
+        <router-link to="/login">Link zur Login Seite</router-link>
       </div>
     </div>
   </div>
@@ -23,13 +26,13 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
   padding-left: 40px;
   padding-right: 40px;
-  align-items: center;
   background-color: var(--color-background-header);
   min-height: 180px;
 }
-.links {
+.rechts {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
