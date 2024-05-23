@@ -65,8 +65,8 @@ Figma Homepage.
 Neues Trello Board erstellt, geteilt, Tasks verschoben.
 Make Seeder ClientSeeder
 #### Do 16.05.2024
-Make Model Employee
-Make Model Appointment
+Make Model Employee,
+Make Model Appointment,
 Beide Seeder gefüllt
 #### Fr 17.05.2024
 Krank
@@ -76,7 +76,11 @@ Pfingsten
 #### Di 21.05.2024
 S.A.D.
 #### Mi 22.05.2024
-Home.vue
-AppFooter.vue
-AppHeader.vue
+Home.vue,
+AppFooter.vue,
+AppHeader.vue,
 root.css
+#### Do 23.05.2024
+Meeting w/Chris.
+Home.vue,
+App.css
