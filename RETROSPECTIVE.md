@@ -84,3 +84,11 @@ root.css
 Meeting w/Chris.
 Home.vue,
 App.css
+#### Fr 24.05.2024
+S.A.D.
+#### Mo 27.05.2024
+S.A.D.
+### 6.Woche
+#### 28.05.2024
+Copilot signup... NEG Konto im Minus?
+Titel geändert
