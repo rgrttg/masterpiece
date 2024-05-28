@@ -1,7 +1,7 @@
 <template>
   <div class="kopf">
     <div class="logo">
-      <img alt="Website-Logo" src="" height="180"/>
+      <img alt="Website-Logo" src="../../img/logo.png" height="125" />
     </div>
     <div class="rechts">
       <div>
