@@ -11,6 +11,7 @@
   --color-background-header: var(--dunkelgrün);
   --color-background-heading: var(--hellgrün);
   --color-background-main: var(--dunkelgrün);
+  --color-background-card: var(--hellgrün);
   --color-background-footer: var(--hellgrün);
 
   --color-border: var(--weiss);
