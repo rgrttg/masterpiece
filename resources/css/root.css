@@ -15,11 +15,11 @@
   --color-background-footer: var(--hellgrün);
 
   --color-border: var(--dunkelgrün);
+  --color-button: var(--gelb);
   
   --color-heading-1: var(--schwarz);
   --color-heading-2: var(--rot);
   --color-card-date: var(--rot);
-  --color-card-text: var(--rosa);
 
   --section-gap: 160px;
 }
