@@ -5,7 +5,11 @@ body {
     Quicksand,
     sans-serif;
   }
-  
+
+main {
+  background-color: var(--color-background-main);
+}
+
 h1 {
   color: var(--color-heading-1);
   background-color: var(--color-background-heading);
