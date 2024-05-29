@@ -92,3 +92,8 @@ S.A.D.
 #### 28.05.2024
 Copilot signup... NEG Konto im Minus?
 Titel geändert
+Logo, Placeholder, Button hinzugefügt.
+#### 29.05.2024
+Kontoübertrag gemacht,
+Copilot signup... POS
+Styles
