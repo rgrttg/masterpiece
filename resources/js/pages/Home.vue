@@ -14,6 +14,7 @@ import AppFooter from '../components/AppFooter.vue';
 
     <!-- Main -->
     <main>
+      <!-- Heading zentrieren -->
       <h1>Deine Kinesiologie-Praxis in Hedingen und Urdorf</h1>
 
       <MainCard />
@@ -24,3 +25,9 @@ import AppFooter from '../components/AppFooter.vue';
       <AppFooter />
     </footer>
 </template>
+
+<!-- <style scoped>
+main {
+  background-color: var(--color-background-main);
+}
+</style> -->
