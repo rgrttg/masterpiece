@@ -1,7 +1,7 @@
 <template>
   <div class="karte">
     <div id="foto">
-      <img alt="Foto" src="../../img/300x300.png" width="300" height="300" />
+      <!-- <img alt="Foto" src="../../img/300x300.png" width="300" height="300" /> -->
     </div>
     <div id="text">
       <h2>IK-K Integrative Kinesiologie Kalbermatter</h2>
@@ -26,13 +26,14 @@
   margin: 64px;
   padding: 64px;
   background-color: var(--color-background-card);
-  min-height: 320px;
+  /* min-height: 320px; */
 }
 
 #foto {
-  width: 300px;
+  min-width: 300px;
   height: 300px;
   border: 9px solid var(--color-border);
+  border-radius: 50%;
 }
 
 #text {
