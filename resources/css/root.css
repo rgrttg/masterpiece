@@ -1,4 +1,4 @@
-/* color palette from  */
+/* color palette from  ik-k.ch */
 :root {
   --schwarz: #323D4A;
   --hellgrün: #E9F2DA;
@@ -10,6 +10,7 @@
 :root {
   --color-background-header: var(--dunkelgrün);
   --color-background-heading: var(--hellgrün);
+  --color-background-body: var(--dunkelgrün);
   --color-background-main: var(--dunkelgrün);
   --color-background-card: var(--hellgrün);
   --color-background-footer: var(--hellgrün);
