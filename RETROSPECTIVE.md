@@ -89,12 +89,14 @@ S.A.D.
 #### Mo 27.05.2024
 S.A.D.
 ### 6.Woche
-#### 28.05.2024
+#### Di 28.05.2024
 Copilot signup... NEG Konto im Minus?
 Titel geändert
 Logo, Placeholder, Button hinzugefügt.
-#### 29.05.2024
+#### Mi 29.05.2024
 Kontoübertrag gemacht,
 Copilot signup... POS
-Meeting w/ Liliana & Sara
+Meeting w/ Liliana & Sara.
 Styles
+#### Do 30.05.2024
+Placeholder durch Foto ersetzt
