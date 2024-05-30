@@ -99,4 +99,7 @@ Copilot signup... POS
 Meeting w/ Liliana & Sara.
 Styles
 #### Do 30.05.2024
-Placeholder durch Foto ersetzt
+Placeholder durch Foto ersetzt.
+Figma.
+Meeting w/Chris.
+Ausrichtung links

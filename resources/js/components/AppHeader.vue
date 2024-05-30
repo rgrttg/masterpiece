@@ -27,8 +27,8 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 50px;
+  padding-right: 64px;
   background-color: var(--color-background-header);
   min-height: 180px;
 }
