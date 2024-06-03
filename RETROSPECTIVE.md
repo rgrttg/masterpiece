@@ -103,3 +103,7 @@ Placeholder durch Foto ersetzt.
 Figma.
 Meeting w/Chris.
 Ausrichtung links
+#### Fr 31.05.2024
+S.A.D.
+#### Mo 03.06.2024
+BuchungDetails.vue
