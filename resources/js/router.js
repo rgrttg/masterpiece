@@ -22,6 +22,16 @@ export const routes = [
         path: "/home",
         component: () => import("./pages/Home.vue"),
     },
+
+    {
+        path: "/termin-wahl",
+        component: () => import("./pages/TerminWahl.vue"),
+    },
+
+    {
+        path: "/buchung-details",
+        component: () => import("./pages/BuchungDetails.vue"),
+    },
 ];
 
 
