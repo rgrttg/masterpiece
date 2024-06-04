@@ -107,3 +107,7 @@ Ausrichtung links
 S.A.D.
 #### Mo 03.06.2024
 BuchungDetails.vue
+FormCard.vue
+#### Di 04.06.2024
+BuchungErfolgreich.vue
+ConfirmCard.vue

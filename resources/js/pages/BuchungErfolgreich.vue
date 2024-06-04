@@ -1,6 +1,6 @@
 <script setup>
 import AppHeader from '../components/AppHeader.vue';
-// import FormCard from '../components/FormCard.vue';
+import ConfirmCard from '../components/ConfirmCard.vue';
 import AppFooter from '../components/AppFooter.vue';
 </script>
 
@@ -12,7 +12,7 @@ import AppFooter from '../components/AppFooter.vue';
   <main>
     <h1>Anmelde-Bestätigung</h1>
 
-    <!-- <FormCard /> -->
+    <ConfirmCard />
   </main>
 
   <footer>
