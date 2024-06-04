@@ -1,6 +1,20 @@
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const validate = () => {
+  // Vorschlag von Copilot
+  console.log('Formular wurde abgeschickt');
+  // einfach auf Bestätigungs-Seite weiterleiten
+}
+</script>
+
 <template>
   <!-- Formular -->
-  <form action="login" method="get">
+  <form action="buchung-erfolgreich" >
+  <!-- <form action="" method="get" @sumit.prevent="validate"> -->
     <div class="formular">
       <div>
         <h2>1. Sitzungstermin</h2>

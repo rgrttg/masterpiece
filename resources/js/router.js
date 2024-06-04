@@ -32,6 +32,11 @@ export const routes = [
         path: "/buchung-details",
         component: () => import("./pages/BuchungDetails.vue"),
     },
+
+    {
+        path: "/buchung-erfolgreich",
+        component: () => import("./pages/BuchungErfolgreich.vue"),
+    },
 ];
 
 
