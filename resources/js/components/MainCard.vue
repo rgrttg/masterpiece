@@ -10,7 +10,7 @@
       <div>Als Diplomierter Kinesiologe und Stress-Experte helfe ich Dir, Kindern und Erwachsenen, mit den 
         täglichen Herausforderungen in Schule, Beruf, Alltag, in Beziehungen, Krankheiten und persönlichen 
         Krisen angemessen klar zu kommen.</div>
-        <a role="button" class="button" href="login" >Hier Termin buchen</a>
+        <a role="button" class="button" href="buchung-details" >Hier Termin buchen</a>
     </div>
   </div>
 </template>
