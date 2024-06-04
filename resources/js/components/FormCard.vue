@@ -1,6 +1,6 @@
 <template>
   <!-- Formular -->
-  <form>
+  <form action="login" method="get">
     <div class="formular">
       <div>
         <h2>1. Sitzungstermin</h2>
@@ -71,6 +71,11 @@
       <div>
         <input type="date" id="geburtsdatum" name="geburtsdatum" placeholder="Dein Geburtsdatum">
       </div>    
+      
+      <!-- Button -->
+      <div>
+        <button class="button" type="submit">Buchung abschliessen</button>
+      </div>
     </div>
   </form>
   
