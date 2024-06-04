@@ -4,6 +4,7 @@
   --hellgrün: #E9F2DA;
   --dunkelgrün: #9CBC64;
   --gelb: #DEE86F;
+  --hellgelb: rgba(222,232,111,0.2);
 }
 
 /* semantic color variables for this project */
@@ -16,7 +17,7 @@
   --color-background-footer: var(--hellgrün);
 
   --color-border: var(--dunkelgrün);
-  --color-input: var(--gelb);
+  --color-input: var(--hellgelb);
   --color-button: var(--gelb);
   
   --color-heading-1: var(--schwarz);

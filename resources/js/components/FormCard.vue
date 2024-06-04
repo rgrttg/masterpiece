@@ -101,6 +101,6 @@ input {
   display: inline-block;
   border: 1px solid var(--color-border);
   box-sizing: border-box;
-  background-color: var(--gelb);
+  background-color: var(--color-input);
 }
 </style>
