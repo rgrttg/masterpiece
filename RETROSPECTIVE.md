@@ -106,8 +106,11 @@ Ausrichtung links
 #### Fr 31.05.2024
 S.A.D.
 #### Mo 03.06.2024
-BuchungDetails.vue
+BuchungDetails.vue,
 FormCard.vue
 #### Di 04.06.2024
-BuchungErfolgreich.vue
+BuchungErfolgreich.vue,
 ConfirmCard.vue
+#### Mi 05.06.2024
+HTML Validierung,
+Meeting w/Chris.
