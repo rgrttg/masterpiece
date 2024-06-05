@@ -35,7 +35,7 @@ const validate = () => {
         <label for="vorname">Vorname: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="text" id="vorname" name="vorname" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="given-name" size="32" placeholder="Dein Vorname">
+        <input type="text" id="vorname" name="vorname" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="given-name" size="32" placeholder="Dein Vorname">
       </div>
       
       <!-- Nachname -->
@@ -43,7 +43,7 @@ const validate = () => {
         <label for="nachname">Nachname: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="text" id="nachname" name="nachname" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="family-name" size="32" placeholder="Dein Nachname">
+        <input type="text" id="nachname" name="nachname" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="family-name" size="32" placeholder="Dein Nachname">
       </div>
       
       <!-- Telefonnummer -->
@@ -51,7 +51,7 @@ const validate = () => {
         <label for="telefon">Telefonnummer: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="tel" id="telefon" name="telefon" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="tel" size="32" placeholder="Deine Telefonnummer">
+        <input type="tel" id="telefon" name="telefon" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="tel" size="32" placeholder="Deine Telefonnummer">
       </div>
       
       <!-- E-Mail -->
@@ -67,7 +67,7 @@ const validate = () => {
         <label for="strasse">Strasse und Hausnummer: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="text" id="strasse" name="strasse" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="street-address" size="32" placeholder="Deine Strasse und Hausnummer">
+        <input type="text" id="strasse" name="strasse" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="street-address" size="32" placeholder="Deine Strasse und Hausnummer">
       </div>
       
       <!-- PLZ und Ort -->
@@ -75,7 +75,7 @@ const validate = () => {
         <label for="plz">PLZ und Ort: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="text" id="plz" name="plz" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="postal-code address-level2" size="32" placeholder="Deine PLZ und Ort">
+        <input type="text" id="plz" name="plz" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="postal-code address-level2" size="32" placeholder="Deine PLZ und Ort">
       </div>
       
       <!-- Geburtsdatum -->
@@ -83,7 +83,7 @@ const validate = () => {
         <label for="geburtsdatum">Geburtsdatum: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="date" id="geburtsdatum" name="geburtsdatum" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="bday" size="32" placeholder="Dein Geburtsdatum">
+        <input type="date" id="geburtsdatum" name="geburtsdatum" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="bday" size="32" placeholder="Dein Geburtsdatum">
       </div>    
       
       <!-- Button -->
