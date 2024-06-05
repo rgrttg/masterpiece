@@ -19,71 +19,73 @@ const validate = () => {
       <div>
         <h2>1. Sitzungstermin</h2>
         <p>Danke für das Ausfüllen dieses Formulars. 
-          Deine Angaben unterliegen dem Datenschutz und 
-          sind nur für internen Gebrauch bestimmt.</p>
+          Deine Angaben unterliegen dem Datenschutz und sind nur für internen Gebrauch bestimmt. 
+          <br><span class="req">*</span> Erforderliche Daten.</p>
       </div>
       <!-- Thema -->
       <div>
-        <label for="thema">Um welches Thema geht es dir? Was steht im Vordergrund? (Energie? Ängste? Schlaflosigkeit?) <span class="req">*</span></label>
+        <label for="thema">Um welches Thema geht es dir? <span class="req">*</span></label>
+        <br>Was steht im Vordergrund (Energie, Ängste, Schlaflosigkeit)? 
       </div>
       <div>
-        <input type="textarea" id="thema" name="thema" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="off" size="32" placeholder="Dein Thema" >
+        <!-- <input type="textarea" id="thema" name="thema" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="off" rows="4" placeholder="Thema" > -->
+        <textarea autofocus rows="2" cols="53" id="thema" name="thema" title="Thema erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="off" placeholder="Thema"></textarea>
       </div>
       
       <!-- Vorname -->
       <div>
-        <label for="vorname">Vorname: <span class="req">*</span></label>
+        <label for="vorname">Dein Vorname: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="text" id="vorname" name="vorname" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="given-name" size="32" placeholder="Dein Vorname">
+        <input type="text" id="vorname" name="vorname" title="Vorname erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="given-name" size="32" placeholder="Vorname">
       </div>
       
       <!-- Nachname -->
       <div>
-        <label for="nachname">Nachname: <span class="req">*</span></label>
+        <label for="nachname">Dein Nachname: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="text" id="nachname" name="nachname" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="family-name" size="32" placeholder="Dein Nachname">
+        <input type="text" id="nachname" name="nachname" title="Nachname erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="family-name" size="32" placeholder="Nachname">
       </div>
       
       <!-- Telefonnummer -->
       <div>
-        <label for="telefon">Telefonnummer: <span class="req">*</span></label>
+        <label for="telefon">Deine Telefonnummer: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="tel" id="telefon" name="telefon" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="tel" size="32" placeholder="Deine Telefonnummer">
+        <input type="tel" id="telefon" name="telefon" title="Telefon erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="tel" size="32" placeholder="Telefonnummer">
       </div>
       
       <!-- E-Mail -->
       <div>
-        <label for="email">E-Mail: <span class="req">*</span></label>
+        <label for="email">Deine E-Mail-Adresse: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="email" id="email" name="email" title="Format: xx@yy.zz" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="email" size="32" placeholder="Deine E-Mail-Adresse">
+        <input type="email" id="email" name="email" title="Format xx@yy.zz erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="email" size="32" placeholder="E-Mail">
       </div>
       
       <!-- Strasse und Hausnummer -->
       <div>
-        <label for="strasse">Strasse und Hausnummer: <span class="req">*</span></label>
+        <label for="strasse">Deine Strasse mit Hausnummer: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="text" id="strasse" name="strasse" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="street-address" size="32" placeholder="Deine Strasse und Hausnummer">
+        <input type="text" id="strasse" name="strasse" title="Strasse und Nummer erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="street-address" size="32" placeholder="Strasse Nr.">
       </div>
       
       <!-- PLZ und Ort -->
       <div>
-        <label for="plz">PLZ und Ort: <span class="req">*</span></label>
+        <label for="plz">Deine PLZ mit Ort: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="text" id="plz" name="plz" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="postal-code address-level2" size="32" placeholder="Deine PLZ und Ort">
+        <input type="text" id="plz" name="plz" title="PLZ und Ort erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="postal-code address-level2" size="32" placeholder="PLZ Ort">
       </div>
       
       <!-- Geburtsdatum -->
       <div>
-        <label for="geburtsdatum">Geburtsdatum: <span class="req">*</span></label>
+        <label for="geburtsdatum">Dein Geburtsdatum: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="date" id="geburtsdatum" name="geburtsdatum" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="bday" size="32" placeholder="Dein Geburtsdatum">
+        <input type="date" id="geburtsdatum" name="geburtsdatum" title="Geburtsdatum erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="bday" >
       </div>    
       
       <!-- Button -->
@@ -113,12 +115,12 @@ label {
   /* padding-top: 8px; */
 }
 
-input {
-  width: 100%;
+input, textarea {
+  /* width: 100%; */
   padding: 4px 0 4px 8px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-border);
   box-sizing: border-box;
   /* background-color: var(--color-input); */
 }
