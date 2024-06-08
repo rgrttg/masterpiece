@@ -18,8 +18,7 @@ const validate = () => {
     <div class="formular">
       <div>
         <h2>1. Sitzungstermin</h2>
-        <p>Danke für das Ausfüllen dieses Formulars. 
-          Deine Angaben unterliegen dem Datenschutz und sind nur für internen Gebrauch bestimmt. 
+        <p>Danke für das Ausfüllen dieses Formulars. Deine Angaben unterliegen dem Datenschutz und sind nur für internen Gebrauch bestimmt.
           <br><span class="req">*</span> Erforderliche Daten.</p>
       </div>
       <!-- Thema -->
