@@ -108,6 +108,7 @@ S.A.D.
 #### Mo 03.06.2024
 BuchungDetails.vue,
 FormCard.vue
+### 7.Woche
 #### Di 04.06.2024
 BuchungErfolgreich.vue,
 ConfirmCard.vue
@@ -115,3 +116,6 @@ ConfirmCard.vue
 HTML Validierung,
 Meeting w/Chris.
 FormCard.vue
+#### Do 06.06.2024
+Recherche,
+Datepicker.
