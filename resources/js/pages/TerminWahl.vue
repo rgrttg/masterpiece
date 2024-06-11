@@ -5,6 +5,8 @@ import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
 import { ref } from 'vue';
 
+const myValue = ref(null);
+
 </script>
 
 <template>
