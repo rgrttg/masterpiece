@@ -122,3 +122,6 @@ Datepicker.
 ### 8.Woche
 #### Di 11.06.2024
 npm vue-ctk-date-time-picker
+#### Mi 12.06.2024
+Quasar DatePicker... NEG
+Ctk-date-picker Pops
