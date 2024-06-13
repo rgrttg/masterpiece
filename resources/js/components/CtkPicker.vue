@@ -59,8 +59,7 @@ export default {
 
 #breite {
   width: 800px;
-  margin-left: 64px;
-  margin-bottom: 64px;
+  margin: 10px auto;
 }
 
 </style>

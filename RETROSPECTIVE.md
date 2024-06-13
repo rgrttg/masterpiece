@@ -124,4 +124,6 @@ Datepicker.
 npm vue-ctk-date-time-picker
 #### Mi 12.06.2024
 Quasar DatePicker... NEG
-Ctk-date-picker Pops
+Ctk-date-picker Props
+#### Do 13.06.2024
+Meeting w/Chris,
