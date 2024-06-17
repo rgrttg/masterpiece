@@ -1,39 +1,11 @@
-<script>
-import VueCtkDateTimePicker from 'vue-ctk-date-time-picker';
-import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
-import { ref } from 'vue';
-
-export default {
-  components: {
-    VueCtkDateTimePicker
-  },
-  props: {
-    inline: { type: Boolean, default: true },
-    format: { type: String, default: 'DD-MM-YYYY HH:mm' },
-    color: { type: String, default: 'var(--dunkelgrün)' },
-    buttonColor: { type: String, default: 'var(--dunkelgrün)' },
-    minuteInterval: { type: Number, default: 10 },
-    minDate: { type: String, default: '2024-06-12' },
-    maxDate: { type: String, default: '2024-12-28' },
-    noWeekendsDays: { type: Boolean, default: true },
-    firstDayOfWeek: { type: Number, default: 1 },
-    disabledHours: { type: Array, default: () => ['00','01','02','03','04','05','06','07','08','18','19','20','21','22','23'] },
-  },
-  setup() {
-    const myValue = ref(null);
-
-    return {
-      myValue
-    };
-  }
-}
-</script>
+<!-- Datepicker Komponente mit einer Auswahl der Tage.
+Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
 
 <template>
   <div id="breite">
     <h2>Vue-Version</h2>
     <p>Bitte wähle einen Tag und eine Zeit aus:</p>
-    <vue-ctk-date-time-picker v-model="myValue" 
+    <vue-ctk-date-time-picker v-model="wunschTermin" 
       :inline="inline" 
       :format="format"
       :color="color"
@@ -47,6 +19,39 @@ export default {
     />
   </div>
 </template>
+
+<script>
+import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
+import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
+import { ref } from 'vue'
+
+export default {
+  components: {
+    VueCtkDateTimePicker
+  },
+  props: {
+    inline: { type: Boolean, default: true },
+    format: { type: String, default: 'DD-MM-YYYY HH:mm' },
+    color: { type: String, default: 'var(--dunkelgrün)' },
+    buttonColor: { type: String, default: 'var(--dunkelgrün)' },
+    minuteInterval: { type: Number, default: 15 },
+    minDate: { type: String, default: '2024-06-12' },
+    maxDate: { type: String, default: '2024-12-28' },
+    noWeekendsDays: { type: Boolean, default: true },
+    firstDayOfWeek: { type: Number, default: 1 },
+    disabledHours: { type: Array, default: () => ['00','01','02','03','04','05','06','07','08','18','19','20','21','22','23'] },
+  },
+  setup() {
+    // Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein.
+    const today = new Date()
+    const wunschTermin = ref(today)
+
+    return {
+      wunschTermin
+    }
+  }
+}
+</script>
 
 <style scoped>
 :deep(.header-picker) {
