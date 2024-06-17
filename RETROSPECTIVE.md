@@ -127,3 +127,11 @@ Quasar DatePicker... NEG
 Ctk-date-picker Props
 #### Do 13.06.2024
 Meeting w/Chris,
+Figma
+#### Sa 15.06.2024
+Figma Termin-Wahl
+### 9.Woche
+#### Mo 17.06.2024
+Eigenes Readme erstellt.
+Kommentare hinzugefügt,
+Default = today
