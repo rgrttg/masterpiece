@@ -2,9 +2,11 @@
 Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
 
 <template>
-  <div id="breite">
-    <h2>Vue-Version</h2>
-    <p>Bitte wähle einen Tag und eine Zeit aus:</p>
+  <div id="picker-card">
+    <h2>
+      Bitte wähle einen Tag und eine Zeit aus:
+    </h2>
+    <!-- TODO: Header ausblenden -->
     <vue-ctk-date-time-picker v-model="wunschTermin" 
       :inline="inline" 
       :format="format"
@@ -17,6 +19,17 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
       :first-day-of-week="firstDayOfWeek"
       :disabled-hours="disabledHours"  
     />
+    <!-- Auf 1 Zeile Text und Button anzeigen -->
+    <div class="fuss">
+      <div id="links">
+        <h3>
+          Du hast den Termin am {{ wunschTermin }} gewählt.
+        </h3>
+      </div>
+      <div id="rechts">
+        <button @click="alert('Termin gebucht!')">Weiter</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -54,19 +67,28 @@ export default {
 </script>
 
 <style scoped>
-:deep(.header-picker) {
-  background-color: var(--dunkelgrün) !important;
-}
-:deep(.time-picker-column-item.active .time-picker-column-item-effect),
-:deep(.datepicker-container .datepicker-days .datepicker-day.selected .datepicker-day-effect) {
-  background-color: var(--gelb) !important;
-}
+  #picker-card {
+    width: 800px;
+    margin: 10px auto;
+  }
 
-#breite {
-  width: 800px;
-  margin: 10px auto;
-}
+  :deep(.header-picker) {
+    background-color: var(--dunkelgrün) !important;
+  }  
+  :deep(.time-picker-column-item.active .time-picker-column-item-effect),
+  :deep(.datepicker-container .datepicker-days .datepicker-day.selected .datepicker-day-effect) {
+    background-color: var(--gelb) !important;
+  }  
 
+  .fuss {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: var(--hellgrün); */
+  }  
+  
 </style>
 
 <!-- /* importiert von https://blog.logrocket.com/comparing-vue-js-date-pickers/ */
