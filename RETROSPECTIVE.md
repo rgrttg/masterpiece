@@ -135,3 +135,5 @@ Figma Termin-Wahl
 Eigenes Readme erstellt.
 Kommentare hinzugefügt,
 Default = today
+#### Di 18.06.2024
+Skizze Programm-Ablauf
