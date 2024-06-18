@@ -138,3 +138,4 @@ Default = today
 #### Di 18.06.2024
 Skizze Programm-Ablauf
 CtkPicker.vue
+Model Controller
