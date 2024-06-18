@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppointmentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -11,6 +12,13 @@ use App\Http\Controllers\UserController;
 
 Route::post('/sanctum/token', TokenController::class);
 
+// DEVS
+Route::get("/test-me", function () {
+    return 'Hallo vom Laravel Backend!';
+});
+
+// Route um den Termin zu reservieren
+Route::post('/new', [AppointmentController::class, 'store']);
 
 /**
  * AUTH ROUTES
