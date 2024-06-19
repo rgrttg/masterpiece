@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\ClientController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,9 @@ Route::get("/test-me", function () {
 
 // Route um den Termin zu reservieren
 Route::post('/new', [AppointmentController::class, 'store']);
+
+// Route umd die Angaben zu speichern
+Route::post('/new-client', [ClientController::class, 'store']);
 
 /**
  * AUTH ROUTES
