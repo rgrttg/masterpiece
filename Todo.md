@@ -5,6 +5,6 @@
 - [X] Button anzeigen
 - [ ] 6 Zeiten anzeigen
 ## Personalien
-- [ ] Formular senden
+- [X] Formular senden
+- [X] In DB schreiben
 - [ ] Termin senden
-- [ ] In DB schreiben
