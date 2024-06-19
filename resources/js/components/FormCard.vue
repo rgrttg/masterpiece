@@ -1,20 +1,50 @@
+<!-- Formular Komponente, die alle Personalien erfasst, 
+mit einem Button "Buchung abschliessen", 
+die Angaben an die API sendet, die sie in der Datenbank zwischenspeichert
+und dann GANZ WICHTIG in den iCloud-Kalender schreibt. -->
 <script setup>
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { reactive, ref } from 'vue'
+import { useRouter } from 'vue-router'
+import axios from 'axios'
 
-const router = useRouter();
+const response = ref()
+const formular = reactive({
+  subject: '',
+  firstname: '',
+  lastname: '',
+  phone: '',
+  email: '',
+  street: '',
+  city: '',
+  birthdate: ''
+})
+const router = useRouter()
 
-const validate = () => {
-  // Vorschlag von Copilot
-  console.log('Formular wurde abgeschickt');
-  // einfach auf Bestätigungs-Seite weiterleiten
+const handleSubmit = () => {
+  try {
+    response.value = axios.post('/api/new-client', {
+      subject: formular.subject,
+      firstname: formular.firstname,
+      lastname: formular.lastname,
+      phone: formular.phone,
+      email: formular.email,
+      street: formular.street,
+      city: formular.city,
+      birthdate: formular.birthdate
+    })
+    console.log('Formular wurde abgeschickt'); // rreturn?
+    router.push('/buchung-erfolgreich')
+  } catch (error) {
+    // Do something with the error
+    console.log('FEHLERMELDUNG: ')
+    console.log(error)
+  }
 }
 </script>
 
 <template>
   <!-- Formular -->
-  <form action="buchung-erfolgreich" >
-  <!-- <form action="" method="get" @sumit.prevent="validate"> -->
+  <form action="" method="POST" @submit.prevent="handleSubmit">
     <div class="formular">
       <div>
         <h2>1. Sitzungstermin</h2>
@@ -28,7 +58,7 @@ const validate = () => {
       </div>
       <div>
         <!-- <input type="textarea" id="thema" name="thema" title="Erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="off" rows="4" placeholder="Thema" > -->
-        <textarea autofocus rows="2" cols="53" id="thema" name="thema" title="Thema erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="off" placeholder="Thema"></textarea>
+        <textarea autofocus rows="2" cols="53" id="thema" v-model="formular.subject" title="Thema erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="off" placeholder="Thema"></textarea>
       </div>
       
       <!-- Vorname -->
@@ -36,7 +66,7 @@ const validate = () => {
         <label for="vorname">Dein Vorname: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="text" id="vorname" name="vorname" title="Vorname erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="given-name" size="32" placeholder="Vorname">
+        <input type="text" id="vorname" v-model="formular.firstname" title="Vorname erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="given-name" size="32" placeholder="Vorname">
       </div>
       
       <!-- Nachname -->
@@ -44,7 +74,7 @@ const validate = () => {
         <label for="nachname">Dein Nachname: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="text" id="nachname" name="nachname" title="Nachname erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="family-name" size="32" placeholder="Nachname">
+        <input type="text" id="nachname" v-model="formular.lastname" title="Nachname erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="family-name" size="32" placeholder="Nachname">
       </div>
       
       <!-- Telefonnummer -->
@@ -52,7 +82,7 @@ const validate = () => {
         <label for="telefon">Deine Telefonnummer: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="tel" id="telefon" name="telefon" title="Telefon erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="tel" size="32" placeholder="Telefonnummer">
+        <input type="tel" id="telefon" v-model="formular.phone" title="Telefon erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="tel" size="32" placeholder="Telefonnummer">
       </div>
       
       <!-- E-Mail -->
@@ -60,7 +90,7 @@ const validate = () => {
         <label for="email">Deine E-Mail-Adresse: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="email" id="email" name="email" title="Format xx@yy.zz erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="email" size="32" placeholder="E-Mail">
+        <input type="email" id="email" v-model="formular.email" title="Format xx@yy.zz erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="email" size="32" placeholder="E-Mail">
       </div>
       
       <!-- Strasse und Hausnummer -->
@@ -68,7 +98,7 @@ const validate = () => {
         <label for="strasse">Deine Strasse mit Hausnummer: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="text" id="strasse" name="strasse" title="Strasse und Nummer erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="street-address" size="32" placeholder="Strasse Nr.">
+        <input type="text" id="strasse" v-model="formular.street" title="Strasse und Nummer erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="street-address" size="32" placeholder="Strasse Nr.">
       </div>
       
       <!-- PLZ und Ort -->
@@ -76,7 +106,7 @@ const validate = () => {
         <label for="plz">Deine PLZ mit Ort: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="text" id="plz" name="plz" title="PLZ und Ort erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="postal-code address-level2" size="32" placeholder="PLZ Ort">
+        <input type="text" id="plz" v-model="formular.city" title="PLZ und Ort erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="postal-code address-level2" size="32" placeholder="PLZ Ort">
       </div>
       
       <!-- Geburtsdatum -->
@@ -84,7 +114,7 @@ const validate = () => {
         <label for="geburtsdatum">Dein Geburtsdatum: <span class="req">*</span></label>
       </div>
       <div>
-        <input type="date" id="geburtsdatum" name="geburtsdatum" title="Geburtsdatum erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="bday" >
+        <input type="date" id="geburtsdatum" v-model="formular.birthdate" title="Geburtsdatum erforderlich" required oninvalid="this.setCustomValidity('Bitte dieses Feld ausfüllen')" onchange="this.setCustomValidity('')" autocomplete="bday" >
       </div>    
       
       <!-- Button -->
