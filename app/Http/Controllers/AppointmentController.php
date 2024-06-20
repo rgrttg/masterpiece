@@ -7,29 +7,31 @@ use App\Models\Appointment;
 
 class AppointmentController extends Controller
 {
-    //
+    // speichere den Termin
     public function store(Request $request)
     {
         // validate the request
-        $request->validate([
-            'start_time' => 'required|date',
-            // 'finish_time' => 'required',
-            // 'employee_id' => 'required',
-            // 'client_id' => 'required',
-            // 'comments' => 'required',
-        ]);
-        // create the appointment
+        // $request->validate([
+        //     'start_time' => 'required',
+        //     'finish_time' => 'required',
+        //     'comments' => 'required',
+        //     'employee_id' => 'required',
+        //     'client_id' => 'required',
+        // ]);
+
+        // save the appointment
+        // $appointment = Appointment::create($request->all());
+
+        // DEVS: Hardcoded appointment
         $appointment = Appointment::create([
-            'start_time' => $request->start_time,
-            // 'finish_time' => $request->finish_time,
-            // 'employee_id' => $request->employee_id,
-            // 'client_id' => $request->client_id,
-            // 'comments' => $request->comments,
+            'start_time' => '2024-06-20 11:00:00',
+            'finish_time' => '2024-06-20 12:00:00',
+            'comments' => 'Status',
+            'client_id' => '1',
+            'employee_id' => '1',
         ]);
-        // return the response
-        return response()->json([
-            'message' => 'Appointment created successfully',
-            'appointment' => $appointment
-        ]);
+        
+        // gib den Termin zurück
+        return response()->json($appointment, 201);
     }
 }
