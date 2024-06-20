@@ -145,3 +145,4 @@ ClientController.php
 HtmlPicker.vue
 #### Do 20.06.2024
 AppointmentController.php
+Validierung hinzugefügt

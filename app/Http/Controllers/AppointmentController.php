@@ -10,25 +10,26 @@ class AppointmentController extends Controller
     // speichere den Termin
     public function store(Request $request)
     {
-        // validate the request
-        // $request->validate([
-        //     'start_time' => 'required',
-        //     'finish_time' => 'required',
-        //     'comments' => 'required',
-        //     'employee_id' => 'required',
-        //     'client_id' => 'required',
-        // ]);
+        // Validierung der Eingaben
+        $request->validate([
+            'employeeId' => 'required|integer',
+            'status' => 'required|string',
+            'clientId' => 'required|integer',
+            'startTime' => 'required|date_format:Y-m-d H:i:s',
+            'finishTime' => 'required|date_format:Y-m-d H:i:s',
+        ]);
 
         // save the appointment
         // $appointment = Appointment::create($request->all());
 
         // DEVS: Hardcoded appointment
+        // 8ung: status wird comments
         $appointment = Appointment::create([
-            'start_time' => '2024-06-20 11:00:00',
-            'finish_time' => '2024-06-20 12:00:00',
-            'comments' => 'Status',
-            'client_id' => '1',
-            'employee_id' => '1',
+            'start_time' => $request->startTime,
+            'finish_time' => $request->finishTime,
+            'comments' => $request->status,
+            'client_id' => $request->clientId,
+            'employee_id' => $request->employeeId
         ]);
         
         // gib den Termin zurück
