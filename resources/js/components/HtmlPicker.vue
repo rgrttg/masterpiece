@@ -6,18 +6,20 @@ import axios from 'axios'
 const response = ref('')
 const formular = reactive({
   employeeId: 1,
-  status: 'startDayTime from request',
+  status: 'finishDayTime calculated',
   clientId: 2,
   startDay: '2024-06-20',
   startTime: '18:00',
-  startDayTime: '2024-06-20 16:00:00',
-  finishDayTime: '2024-06-20 17:00:00',
+  finishTime: '19:00',
+  startDayTime: '',
+  finishDayTime: '',
 })
 const router = useRouter()
 
 const handleSubmit = () => {
-  console.log('Termin von: ' + formular.startTime + ' bis: ' + formular.finishTime)
-
+  formular.startDayTime = formular.startDay + ' ' + formular.startTime + ':00'
+  formular.finishDayTime = formular.startDay + ' ' + formular.finishTime + ':00'
+  console.log('Termin von: ' + formular.startTime + ' bis: ' + formular.finishDayTime)
   try {
     response.value = axios.post('/api/new-appointment', {
       employeeId: formular.employeeId,
