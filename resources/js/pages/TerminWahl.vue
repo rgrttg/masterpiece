@@ -19,8 +19,8 @@ import CtkPicker from '../components/CtkPicker.vue';
     <h1>Termin buchen</h1>
     
     <!-- Links den Datepicker -->
-    <!-- <HtmlPicker /> -->
-    <CtkPicker />
+    <HtmlPicker />
+    <!-- <CtkPicker /> -->
 
     <!-- Rechts den Timepicker -->
 
