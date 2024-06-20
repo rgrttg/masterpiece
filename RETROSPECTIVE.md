@@ -142,3 +142,6 @@ Model Controller
 #### Mi 19.06.2024
 FormCard.vue
 ClientController.php
+HtmlPicker.vue
+#### Do 20.06.2024
+AppointmentController.php
