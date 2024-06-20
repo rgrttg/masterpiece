@@ -19,9 +19,9 @@ Route::get("/test-me", function () {
 });
 
 // Route um den Termin zu reservieren
-Route::post('/new', [AppointmentController::class, 'store']);
+Route::post('/new-appointment', [AppointmentController::class, 'store']);
 
-// Route umd die Angaben zu speichern
+// Route um die Angaben zu speichern
 Route::post('/new-client', [ClientController::class, 'store']);
 
 /**
