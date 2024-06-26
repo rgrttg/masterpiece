@@ -75,6 +75,7 @@ export default {
     }
   }
 }
+// [Vue warn]: inject() can only be used inside setup() or functional components.
 const router = useRouter()
 
 const handleSubmit = async() => {
