@@ -1,10 +1,10 @@
 <template>
   <div class="fuss">
-    <div class="one"> 
+    <div id="one"> 
       <!-- Minimale Copyright Angaben -->
-      (C) 2024
+      &copy; 2024&nbsp;
     </div>
-    <div class="two">
+    <div id="two">
       by Roger Ottiger
     </div>
   </div>
@@ -15,8 +15,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: var(--color-background-footer);
+  /* sticky footer */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 </style>

@@ -8,3 +8,5 @@
 - [X] Formular senden
 - [X] In DB schreiben
 - [ ] Termin senden
+## Anmeldebestätigung in ConfirmCard.vue
+- [ ] sticky footer
