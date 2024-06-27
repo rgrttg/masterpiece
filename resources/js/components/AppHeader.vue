@@ -5,16 +5,17 @@
     </div>
     <div class="rechts">
       <div>
-        Home
+        <a href="/">Home</a>
       </div>
       <div>
-        Termin buchen
+        <a href="/termin-wahl">Termin buchen</a>
       </div>
       <div>
         Über mich
+        <!-- <a href="/about">Über mich</a> -->
       </div>
       <div>
-        <router-link to="/login">Link zur Login Seite</router-link>
+        <router-link to="/login">Login</router-link>
       </div>
     </div>
   </div>
