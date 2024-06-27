@@ -4,7 +4,8 @@
       <h2>Vielen Dank für Deine Anmeldung</h2>
     </div>
     <div class="card-body">
-      <p>Eine Bestätigung wurde an Deine Adresse kate@winslet.com gesendet.</p>
+      <!-- Feature: Bestätigungsmail senden -->
+      <!-- <p>Eine Bestätigung wurde an Deine Adresse kate@winslet.com gesendet.</p> -->
     </div>
     <div>
       <h3>Ich freue mich auf Dich...</h3>

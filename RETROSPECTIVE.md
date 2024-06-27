@@ -151,3 +151,5 @@ Validierung hinzugefügt
 tsdav
 #### Mi 26.06.2024
 Test-Seite
+#### Do 27.06.2024
+ConfirmCard.vue
