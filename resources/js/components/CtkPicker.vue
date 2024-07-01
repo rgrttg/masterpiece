@@ -1,3 +1,66 @@
+<script setup>
+import { ref, defineComponent } from 'vue'
+import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
+import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
+import { useRouter } from 'vue-router'
+
+defineComponent({
+  components: {
+    VueCtkDateTimePicker
+  },
+  props: {
+    inline: Boolean,
+    format: String,
+    color: String,  
+    buttonColor: String,
+    minuteInterval: Number,
+    noHeader: Boolean,
+    minDate: String,
+    maxDate: String,
+    noWeekendsDays: Boolean,
+    firstDayOfWeek: Number,
+    disabledHours: Array,
+  }
+})
+
+    // Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein.
+    // und schon im Format DD.MM.YYYY HH:mm angezeigt werden.
+    // const today = new Date().toLocaleDateString('de-CH')
+    const today = new Date().toISOString().slice(0, 10)
+    console.log(today)
+    const wunschTermin = ref(today)
+    console.log(wunschTermin.value)
+
+    const response = ref('')
+    // [Vue warn]: inject() can only be used inside setup() or functional components.
+    const router = useRouter()
+
+
+
+const handleSubmit = async() => {
+  console.log("handleSubmit aufgerufen")
+  try {
+  const startDayTime = wunschTermin.value + ' 12:00:00'
+  const finishDayTime = wunschTermin.value + ' 13:00:00'
+    alert('Speichere Termin von: ' + startDayTime + ' bis: ' + finishDayTime)
+    response.value = axios.post('/api/new-appointment', {
+        employeeId: 1,
+        status: 'Speichere mit hardcodierter Start und Endzeit',
+        clientId: 3,
+        startTime: startDayTime,
+        finishTime: finishDayTime,
+    })
+      console.log('Termin wurde abgeschickt: ')
+      console.log(response.value)
+      router.push('/buchung-details')
+  } catch (error) {
+      // Do something with the error
+      console.log("FEHLERMELDUNG: ")
+      console.log(error)
+  }
+};
+
+</script>
 <!-- Datepicker Komponente mit einer Auswahl der Tage.
 Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
 
@@ -8,19 +71,19 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     </h2>
 
     <form action="" method="POST" @submit.prevent="handleSubmit">
-    <vue-ctk-date-time-picker v-model="wunschTermin" 
-      :inline="inline" 
-      :format="format"
-      :color="color"
-      :button-color="buttonColor"
-      :minute-interval="minuteInterval"
-      :no-header="noHeader"
-      :min-date="minDate"
-      :max-date="maxDate"
-      :no-weekends-days="noWeekendsDays"
-      :first-day-of-week="firstDayOfWeek"
-      :disabled-hours="disabledHours"  
-    />
+      <div>
+        <!-- [Vue warn]: Invalid prop: type check failed for prop "inline". Expected Boolean, got String with value "true".  -->
+        <vue-ctk-date-time-picker v-model="wunschTermin" 
+          inline=true
+          firstDayOfWeek=1
+          noWeekendsDays=true
+          minDate="2024-06-30"
+          maxDate="2024-12-28"
+          minuteInterval=15
+        />
+        <!-- [Vue warn]: Property "inline" was accessed during render but is not defined on instance. -->
+        <!-- :inline="inline"  -->
+      </div>
     <!-- Auf einer Zeile Text und Button anzeigen -->
     <!-- TODO: Termin immer im Schweizer Format anzeigen -->
     <div class="fuss">
@@ -31,67 +94,13 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
       </div>
       <div id="rechts">
           <!-- <input type="hidden" name="appointment" v-model="wunschTermin"> -->
-          <!-- <button type="submit">Weiter</button> -->
-          <button type="submit" @click="console.log('Button gedrückt!')">Weiter</button>
+          <button type="submit">Weiter</button>
+          <!-- <button type="submit" @click="console.log('Button gedrückt!')">Weiter</button> -->
         </div>
       </div>
     </form>
   </div>
 </template>
-
-<script>
-import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
-import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-
-export default {
-  components: {
-    VueCtkDateTimePicker
-  },
-  props: {
-    inline: { type: Boolean, default: true },
-    format: { type: String, default: 'DD.MM.YYYY HH.mm' },
-    color: { type: String, default: 'var(--dunkelgrün)' },
-    buttonColor: { type: String, default: 'var(--dunkelgrün)' },
-    minuteInterval: { type: Number, default: 15 },
-    noHeader: { type: Boolean, default: true },
-    minDate: { type: String, default: '2024-06-12' },
-    maxDate: { type: String, default: '2024-12-28' },
-    noWeekendsDays: { type: Boolean, default: true },
-    firstDayOfWeek: { type: Number, default: 1 },
-    disabledHours: { type: Array, default: () => ['00','01','02','03','04','05','06','07','08','18','19','20','21','22','23'] },
-  },
-  setup() {
-    // Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein.
-    // und schon im Format DD.MM.YYYY HH:mm angezeigt werden.
-    const today = new Date()
-    console.log(today)
-    const wunschTermin = ref(today)
-    console.log(wunschTermin)
-
-    return {
-      wunschTermin
-    }
-  }
-}
-// [Vue warn]: inject() can only be used inside setup() or functional components.
-const router = useRouter()
-
-const handleSubmit = async() => {
-  console.log("handleSubmit aufgerufen")
-  try {
-      // console.log(formular.titel)
-      // console.log(formular.text)
-      response.value = await axios.post('/api/new', { request: formular.appointment })
-      router.push('/buchung-details')
-    } catch (error) {
-      // Do something with the error
-      console.log("FEHLERMELDUNG: ")
-      console.log(error)
-    }
-  };
-</script>
 
 <style scoped>
   #picker-card {

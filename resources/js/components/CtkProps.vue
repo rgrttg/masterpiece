@@ -1,0 +1,86 @@
+autoClose
+{default: false, type: ƒ}
+behaviour
+{type: ƒ, default: ƒ}
+buttonColor
+{default: null, type: ƒ}
+buttonNowTranslation
+{default: null, type: ƒ}
+color
+{default: 'dodgerblue', type: ƒ}
+customShortcuts
+{type: ƒ, default: ƒ}
+dark
+{default: false, type: ƒ}
+disabledDates
+{type: ƒ, default: ƒ}
+disabledHours
+{type: ƒ, default: ƒ}
+disabledWeekly
+{type: ƒ, default: ƒ}
+enabledDates
+{type: ƒ, default: ƒ}
+error
+{default: null, type: ƒ}
+firstDayOfWeek
+{default: null, type: ƒ}
+format
+{default: 'YYYY-MM-DD hh:mm a', type: ƒ}
+formatted
+{default: 'llll', type: ƒ}
+hint
+{default: null, type: ƒ}
+inline
+{default: false, type: ƒ}
+inputSize
+{default: null, type: ƒ}
+label
+{default: 'Select date & time', type: ƒ}
+locale
+{default: 'en', type: ƒ}
+maxDate
+{default: null, type: ƒ}
+minDate
+{default: null, type: ƒ}
+minuteInterval
+{type: Array(2), default: 1}
+modelValue
+{type: Array(2), default: null}
+noButton
+{default: false, type: ƒ}
+noButtonNow
+{default: false, type: ƒ}
+noButtonValidate
+{default: false, type: ƒ}
+noClearButton
+{default: false, type: ƒ}
+noHeader
+{default: false, type: ƒ}
+noKeyboard
+{default: false, type: ƒ}
+noLabel
+{default: false, type: ƒ}
+noShortcuts
+{default: false, type: ƒ}
+noWeekendsDays
+{default: false, type: ƒ}
+onlyDate
+{default: false, type: ƒ}
+onlyTime
+{default: false, type: ƒ}
+open
+{default: false, type: ƒ}
+outputFormat
+{default: null, type: ƒ}
+overlay
+{default: false, type: ƒ}
+persistent
+{default: false, type: ƒ}
+position
+{default: null, type: ƒ}
+range
+{default: false, type: ƒ}
+right
+{default: false, type: ƒ}
+shortcut
+{default: null, type: ƒ}
