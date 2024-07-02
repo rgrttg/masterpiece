@@ -1,49 +1,12 @@
 <!-- Datepicker Komponente mit einer Auswahl der Tage.
 Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
 
-<template>
-  <div id="picker-card">
-    <h2>
-      Bitte wähle einen Tag und eine Zeit aus:
-    </h2>
-
-    <form action="" method="POST" @submit.prevent="handleSubmit">
-    <vue-ctk-date-time-picker v-model="wunschTermin" 
-      :inline="inline" 
-      :format="format"
-      :color="color"
-      :button-color="buttonColor"
-      :minute-interval="minuteInterval"
-      :no-header="noHeader"
-      :min-date="minDate"
-      :max-date="maxDate"
-      :no-weekends-days="noWeekendsDays"
-      :first-day-of-week="firstDayOfWeek"
-      :disabled-hours="disabledHours"  
-    />
-    <!-- Auf einer Zeile Text und Button anzeigen -->
-    <!-- TODO: Termin immer im Schweizer Format anzeigen -->
-    <div class="fuss">
-      <div id="links">
-        <h3>
-          Du hast den Termin am {{ wunschTermin }} Uhr gewählt.
-        </h3>
-      </div>
-      <div id="rechts">
-          <!-- <input type="hidden" name="appointment" v-model="wunschTermin"> -->
-          <!-- <button type="submit">Weiter</button> -->
-          <button type="submit" @click="console.log('Button gedrückt!')">Weiter</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</template>
-
 <script>
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import axios from 'axios'
 
 export default {
   components: {
@@ -68,30 +31,81 @@ export default {
     const today = new Date()
     console.log(today)
     const wunschTermin = ref(today)
-    console.log(wunschTermin)
+    console.log(wunschTermin.value)
+    
+    // [Vue warn]: inject() can only be used inside setup() or functional components.
+    const router = useRouter()
+    const response = ref('')
 
+    const handleSubmit = () => {
+      console.log("handleSubmit aufgerufen")
+      try {
+          // console.log(formular.titel)
+          // console.log(formular.text)
+          response.value = axios.post('/api/new-appointment', { 
+            employeeId: 1,
+            status: 'Status',
+            clientId: 2,
+            startTime: wunschTermin.value,
+            finishTime: wunschTermin.value,
+          })
+          router.push('/buchung-details')
+      } 
+      catch (error) {
+          // Do something with the error
+          console.log("FEHLERMELDUNG: ")
+          console.log(error)
+      }
+    };
+    
+    // [Vue warn]: Property "wunschTermin" was accessed during render but is not defined on instance.
     return {
       wunschTermin
     }
   }
 }
-// [Vue warn]: inject() can only be used inside setup() or functional components.
-const router = useRouter()
 
-const handleSubmit = async() => {
-  console.log("handleSubmit aufgerufen")
-  try {
-      // console.log(formular.titel)
-      // console.log(formular.text)
-      response.value = await axios.post('/api/new', { request: formular.appointment })
-      router.push('/buchung-details')
-    } catch (error) {
-      // Do something with the error
-      console.log("FEHLERMELDUNG: ")
-      console.log(error)
-    }
-  };
 </script>
+
+<template>
+  <div id="picker-card">
+    <h2>
+      Bitte wähle einen Tag und eine Zeit aus:
+    </h2>
+
+    <form action="" method="POST" @submit.prevent="handleSubmit">
+      <div>
+        <vue-ctk-date-time-picker v-model="wunschTermin" 
+        :inline="inline" 
+        :format="format"
+        :color="color"
+        :button-color="buttonColor"
+        :minute-interval="minuteInterval"
+        :no-header="noHeader"
+        :min-date="minDate"
+        :max-date="maxDate"
+        :no-weekends-days="noWeekendsDays"
+        :first-day-of-week="firstDayOfWeek"
+        :disabled-hours="disabledHours"  
+        />
+      </div>
+      <!-- Auf einer Zeile Text und Button anzeigen -->
+      <!-- TODO: Termin immer im Schweizer Format anzeigen -->
+      <div class="fuss">
+        <div id="links">
+          <h3>
+          Du hast den Termin am {{ wunschTermin }} Uhr gewählt.
+          </h3>
+        </div>
+        <div id="rechts">
+          <!-- <input type="hidden" name="appointment" v-model="wunschTermin"> -->
+          <button type="submit">Weiter</button>
+          <!-- <button type="submit" @click="console.log('Button gedrückt!')">Weiter</button> -->
+        </div>
+      </div>
+    </form>
+  </div>
+</template>
 
 <style scoped>
   #picker-card {
