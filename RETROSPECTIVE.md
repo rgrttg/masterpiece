@@ -160,3 +160,6 @@ CtkPicker.vue
 ### 11.Woche
 #### 01.07.2024
 Composition API
+#### 02.07.2024
+Trello
+Meeting w/Chris
