@@ -31,7 +31,7 @@ const handleSubmit = () => {
     })
     console.log('Termin wurde abgeschickt: ')
     console.log(response.value)
-    // router.push('/buchung-details')
+    router.push('/buchung-details')
   } catch (error) {
     console.log('FEHLERMELDUNG: ')
     console.log(error)
