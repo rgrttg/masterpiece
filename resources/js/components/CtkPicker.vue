@@ -74,12 +74,15 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
       <div>
         <!-- [Vue warn]: Invalid prop: type check failed for prop "inline". Expected Boolean, got String with value "true".  -->
         <vue-ctk-date-time-picker v-model="wunschTermin" 
-          inline=true
-          firstDayOfWeek=1
-          noWeekendsDays=true
+          :inline=true
+          :firstDayOfWeek=1
+          :noWeekendsDays=true
           minDate="2024-06-30"
           maxDate="2024-12-28"
-          minuteInterval=15
+          :minuteInterval=15
+          color="#9CBC64"
+          format="YYYY-MM-DD hh.mm"
+          :disabledHours="['00', '01', '02', '03', '04', '05', '06', '07', '08', '18', '19', '20', '21', '22', '23']"
         />
         <!-- [Vue warn]: Property "inline" was accessed during render but is not defined on instance. -->
         <!-- :inline="inline"  -->
