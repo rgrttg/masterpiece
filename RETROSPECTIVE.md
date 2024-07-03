@@ -158,8 +158,11 @@ AppFooter.vue
 #### So 30.06.2024
 CtkPicker.vue
 ### 11.Woche
-#### 01.07.2024
+#### Mo 01.07.2024
 Composition API
-#### 02.07.2024
+#### Di 02.07.2024
 Trello
 Meeting w/Chris
+...
+#### Mi 03.07.2024
+Meeting w/Sara

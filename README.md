@@ -38,7 +38,7 @@ Das Login klappt nicht wegen "Error 405 method not allowed"
 sudo netstat -laputen | grep "3306"
 sudo netstat -laputen | grep ":80 "
 #### oder kurz (lokal)
-sudo ../ns
+sudo ./ns
 #### und dann
 sudo kill pid1 pid2
 sail up

@@ -1,0 +1,2 @@
+sudo netstat -laputen | grep "3306"
+netstat -laputen | grep ":80 "
