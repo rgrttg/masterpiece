@@ -24,12 +24,12 @@ defineComponent({
 })
 
     // Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein.
-    // und schon im Format DD.MM.YYYY HH:mm angezeigt werden.
+    // und schon im Format "DD.MM.YYYY HH.mm Uhr" angezeigt werden.
     // const today = new Date().toLocaleDateString('de-CH')
     const today = new Date().toISOString().slice(0, 10)
-    console.log(today)
+    console.log("today: " + today)
     const wunschTermin = ref(today)
-    console.log(wunschTermin.value)
+    console.log("value: " + wunschTermin.value)
 
     const response = ref('')
     // [Vue warn]: inject() can only be used inside setup() or functional components.
@@ -40,12 +40,13 @@ defineComponent({
 const handleSubmit = async() => {
   console.log("handleSubmit aufgerufen")
   try {
-  const startDayTime = wunschTermin.value + ' 12:00:00'
-  const finishDayTime = wunschTermin.value + ' 13:00:00'
+  const startDayTime = wunschTermin.value
+  // TODO: Endzeit auf 1 Stunde später setzen
+  const finishDayTime = wunschTermin.value
     alert('Speichere Termin von: ' + startDayTime + ' bis: ' + finishDayTime)
     response.value = axios.post('/api/new-appointment', {
         employeeId: 1,
-        status: 'Speichere mit hardcodierter Start und Endzeit',
+        status: 'Speichere mit gleicher Start und Endzeit',
         clientId: 3,
         startTime: startDayTime,
         finishTime: finishDayTime,
@@ -75,14 +76,26 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
         <!-- [Vue warn]: Invalid prop: type check failed for prop "inline". Expected Boolean, got String with value "true".  -->
         <vue-ctk-date-time-picker v-model="wunschTermin" 
           :inline=true
+          color="#9CBC64"
+          button-color="#9CBC64"
+          format="YYYY-MM-DD hh:mm"
+          locale="de"
+          :no-header=false
+
           :firstDayOfWeek=1
           :noWeekendsDays=true
-          minDate="2024-06-30"
-          maxDate="2024-12-28"
-          :minuteInterval=15
-          color="#9CBC64"
-          format="YYYY-MM-DD hh.mm"
-          :disabledHours="['00', '01', '02', '03', '04', '05', '06', '07', '08', '18', '19', '20', '21', '22', '23']"
+          :min-date=today
+          max-date="2024-07-30"
+          :disabled-weekly=[4]
+          :only-date=false
+          
+          :disabled-hours="['00', '01', '02', '03', '04', '05', '06', '07', '08', 
+                            '19', '20', '21', '22', '23']"
+          minute-interval=15
+          
+          button-now-translation="Jetzt"
+          :no-button-now=false
+          output-format="YYYY-MM-DD HH:mm:00"
         />
         <!-- [Vue warn]: Property "inline" was accessed during render but is not defined on instance. -->
         <!-- :inline="inline"  -->
