@@ -47,7 +47,7 @@ const handleSubmit = async() => {
     alert('Speichere Termin von: ' + startDayTime + ' bis: ' + finishDayTime)
     response.value = axios.post('/api/new-appointment', {
         employeeId: 1,
-        status: 'Speichere mit gleicher Start und Endzeit',
+        status: 'Output Format geändert',
         clientId: 3,
         startTime: startDayTime,
         finishTime: finishDayTime,
@@ -96,7 +96,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
           
           button-now-translation="Heute"
           :no-button-now=false
-          output-format="YYYY-MM-DD HH:mm:00"
+          output-format="YYYY-MM-DD"
         />
         <!-- [Vue warn]: Property "inline" was accessed during render but is not defined on instance. -->
         <!-- :inline="inline"  -->
