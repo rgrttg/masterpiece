@@ -175,4 +175,7 @@ Verlängerung bis 12.08.2024
 #### Di 16.07.2024
 E-Mail Sara
 Gespräch w/Chris
-CtkPicker.vue mit 2x3 Radiobuttons
+CtkPicker.vue: 
+mit 2x3 Radiobuttons,
+rudimentäres Speichern
+

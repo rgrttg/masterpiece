@@ -35,15 +35,15 @@ defineComponent({
     // [Vue warn]: inject() can only be used inside setup() or functional components.
     const router = useRouter()
 
-    const time = ref('09:00')
+    const time = ref('18:00:00')
 
 const handleSubmit = async() => {
-  console.log("handleSubmit aufgerufen")
+  console.log("Enter handleSubmit")
   console.log("Time: " + time.value)
   try {
-  const startDayTime = wunschTermin.value
+  const startDayTime = wunschTermin.value + " " + time.value
   // TODO: Endzeit auf 1 Stunde später setzen
-  const finishDayTime = wunschTermin.value
+  const finishDayTime = startDayTime
     alert('Speichere Termin von: ' + startDayTime + ' bis: ' + finishDayTime)
     response.value = axios.post('/api/new-appointment', {
         employeeId: 1,
@@ -106,14 +106,14 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
           <!-- Tabelle 2x3 mit Radio-Buttons und den Zeiten 9:00, 10:30, 13:30, 15:00, 16:30, 18:00-->
           <table>
             <tr>
-              <td><input type="radio" v-model="time" value="09:00" >09:00 Uhr</td>
-              <td><input type="radio" v-model="time" value="10:30" >10:30 Uhr</td>
-              <td><input type="radio" v-model="time" value="13:30" >13:30 Uhr</td>
+              <td><input type="radio" v-model="time" value="09:00:00" >09.00 Uhr</td>
+              <td><input type="radio" v-model="time" value="10:30:00" >10.30 Uhr</td>
+              <td><input type="radio" v-model="time" value="13:30:00" >13.30 Uhr</td>
             </tr>
             <tr>
-              <td><input type="radio" v-model="time" value="15:00" >15:00 Uhr</td>
-              <td><input type="radio" v-model="time" value="16:30" >16:30 Uhr</td>
-              <td><input type="radio" v-model="time" value="18:00" >18:00 Uhr</td>
+              <td><input type="radio" v-model="time" value="15:00:00" >15.00 Uhr</td>
+              <td><input type="radio" v-model="time" value="16:30:00" >16.30 Uhr</td>
+              <td><input type="radio" v-model="time" value="18:00:00" >18.00 Uhr</td>
             </tr>
           </table>
         </div>
@@ -123,7 +123,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
         <div class="fuss">
           <div id="links">
             <h3>
-              Du hast den Termin am {{ wunschTermin }} Uhr gewählt.
+              Termin am: {{ wunschTermin }} Uhr
             </h3>
           </div>
           <div id="rechts">
@@ -155,6 +155,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border: 1px solid black;
   }
 
   .fuss {
