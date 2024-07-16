@@ -166,3 +166,13 @@ Meeting w/Chris
 ...
 #### Mi 03.07.2024
 Meeting w/Sara
+Alle Props durchgegangen
+### Ferien
+#### Do 04.07.2024 bis So 14.07.2024
+### 13.Woche
+#### Mo 15.07.2024
+Verlängerung bis 12.08.2024
+#### Di 16.07.2024
+E-Mail Sara
+Gespräch w/Chris
+CtkPicker.vue mit 2x3 Radiobuttons

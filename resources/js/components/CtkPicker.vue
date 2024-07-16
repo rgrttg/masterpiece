@@ -10,16 +10,16 @@ defineComponent({
   },
   props: {
     inline: Boolean,
-    format: String,
     color: String,  
     buttonColor: String,
-    minuteInterval: Number,
+    format: String,
     noHeader: Boolean,
+    firstDayOfWeek: Number,
+    noWeekendsDays: Boolean,
     minDate: String,
     maxDate: String,
-    noWeekendsDays: Boolean,
-    firstDayOfWeek: Number,
     disabledHours: Array,
+    minuteInterval: Number,
   }
 })
 
@@ -35,10 +35,11 @@ defineComponent({
     // [Vue warn]: inject() can only be used inside setup() or functional components.
     const router = useRouter()
 
-
+    const time = ref('09:00')
 
 const handleSubmit = async() => {
   console.log("handleSubmit aufgerufen")
+  console.log("Time: " + time.value)
   try {
   const startDayTime = wunschTermin.value
   // TODO: Endzeit auf 1 Stunde später setzen
@@ -72,7 +73,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     </h2>
 
     <form action="" method="POST" @submit.prevent="handleSubmit">
-      <div>
+      <div id="daypicker">
         <!-- [Vue warn]: Invalid prop: type check failed for prop "inline". Expected Boolean, got String with value "true".  -->
         <vue-ctk-date-time-picker v-model="wunschTermin" 
           :inline=true
@@ -87,31 +88,49 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
           :min-date=today
           max-date="2024-07-30"
           :disabled-weekly=[4]
-          :only-date=false
+          :only-date=true
           
           :disabled-hours="['00', '01', '02', '03', '04', '05', '06', '07', '08', 
                             '19', '20', '21', '22', '23']"
           minute-interval=15
           
-          button-now-translation="Jetzt"
+          button-now-translation="Heute"
           :no-button-now=false
           output-format="YYYY-MM-DD HH:mm:00"
         />
         <!-- [Vue warn]: Property "inline" was accessed during render but is not defined on instance. -->
         <!-- :inline="inline"  -->
       </div>
-    <!-- Auf einer Zeile Text und Button anzeigen -->
-    <!-- TODO: Termin immer im Schweizer Format anzeigen -->
-    <div class="fuss">
-      <div id="links">
-        <h3>
-          Du hast den Termin am {{ wunschTermin }} Uhr gewählt.
-        </h3>
-      </div>
-      <div id="rechts">
-          <!-- <input type="hidden" name="appointment" v-model="wunschTermin"> -->
-          <button type="submit">Weiter</button>
-          <!-- <button type="submit" @click="console.log('Button gedrückt!')">Weiter</button> -->
+      <div id="timepicker">
+        <div id="kopf">
+          <!-- Tabelle 2x3 mit Radio-Buttons und den Zeiten 9:00, 10:30, 13:30, 15:00, 16:30, 18:00-->
+          <table>
+            <tr>
+              <td><input type="radio" v-model="time" value="09:00" >09:00 Uhr</td>
+              <td><input type="radio" v-model="time" value="10:30" >10:30 Uhr</td>
+              <td><input type="radio" v-model="time" value="13:30" >13:30 Uhr</td>
+            </tr>
+            <tr>
+              <td><input type="radio" v-model="time" value="15:00" >15:00 Uhr</td>
+              <td><input type="radio" v-model="time" value="16:30" >16:30 Uhr</td>
+              <td><input type="radio" v-model="time" value="18:00" >18:00 Uhr</td>
+            </tr>
+          </table>
+        </div>
+        
+        <!-- Auf einer Zeile Text und Button anzeigen -->
+        <!-- TODO: Termin immer im Schweizer Format anzeigen -->
+        <div class="fuss">
+          <div id="links">
+            <h3>
+              Du hast den Termin am {{ wunschTermin }} Uhr gewählt.
+            </h3>
+          </div>
+          <div id="rechts">
+            <!-- <input type="hidden" name="appointment" v-model="wunschTermin"> -->
+            <button type="submit">Weiter</button>
+            <!-- <button type="submit" @click="console.log('Button gedrückt!')">Weiter</button> -->
+          </div>
         </div>
       </div>
     </form>
@@ -124,6 +143,30 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     margin: 10px auto;
   }
 
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #timepicker {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .fuss {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    /* background-color: var(--hellgrün); */
+  }  
+  
   :deep(.header-picker) {
     background-color: var(--dunkelgrün) !important;
   }  
@@ -132,15 +175,6 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     background-color: var(--gelb) !important;
   }  
 
-  .fuss {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    /* background-color: var(--hellgrün); */
-  }  
-  
 </style>
 
 <!-- /* importiert von https://blog.logrocket.com/comparing-vue-js-date-pickers/ */
