@@ -128,7 +128,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
           </div>
           <div id="rechts">
             <!-- <input type="hidden" name="appointment" v-model="wunschTermin"> -->
-            <button type="submit">Weiter</button>
+            <button class="button" type="submit">Weiter</button>
             <!-- <button type="submit" @click="console.log('Button gedrückt!')">Weiter</button> -->
           </div>
         </div>
