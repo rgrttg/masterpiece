@@ -13,13 +13,10 @@ defineComponent({
     color: String,  
     buttonColor: String,
     format: String,
-    noHeader: Boolean,
     firstDayOfWeek: Number,
     noWeekendsDays: Boolean,
     minDate: String,
     maxDate: String,
-    disabledHours: Array,
-    minuteInterval: Number,
   }
 })
 
@@ -81,7 +78,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
           button-color="#9CBC64"
           format="YYYY-MM-DD hh:mm"
           locale="de"
-          :no-header=false
+          :no-header=true
 
           :firstDayOfWeek=1
           :noWeekendsDays=true
@@ -106,14 +103,15 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
           <!-- Tabelle 2x3 mit Radio-Buttons und den Zeiten 9:00, 10:30, 13:30, 15:00, 16:30, 18:00-->
           <table>
             <tr>
-              <td><input type="radio" v-model="time" value="09:00:00" >09.00 Uhr</td>
-              <td><input type="radio" v-model="time" value="10:30:00" >10.30 Uhr</td>
-              <td><input type="radio" v-model="time" value="13:30:00" >13.30 Uhr</td>
+              <!--                                        <label for="fname">First name:</label> -->
+              <td><input id="radio1" type="radio" v-model="time" value="09:00:00" ><label for="radio1">09.00</label></td>
+              <td><input id="radio2" type="radio" v-model="time" value="10:30:00" ><label for="radio2">10.30</label></td>
+              <td><input id="radio3" type="radio" v-model="time" value="13:30:00" ><label for="radio3">13.30</label></td>
             </tr>
             <tr>
-              <td><input type="radio" v-model="time" value="15:00:00" >15.00 Uhr</td>
-              <td><input type="radio" v-model="time" value="16:30:00" >16.30 Uhr</td>
-              <td><input type="radio" v-model="time" value="18:00:00" >18.00 Uhr</td>
+              <td><input id="radio4" type="radio" v-model="time" value="15:00:00" ><label for="radio4">15.00</label></td>
+              <td><input id="radio5" type="radio" v-model="time" value="16:30:00" ><label for="radio5">16.30</label></td>
+              <td><input id="radio6" type="radio" v-model="time" value="18:00:00" ><label for="radio6">18.00</label></td>
             </tr>
           </table>
         </div>
@@ -121,13 +119,13 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
         <!-- Auf einer Zeile Text und Button anzeigen -->
         <!-- TODO: Termin immer im Schweizer Format anzeigen -->
         <div class="fuss">
-          <div id="links">
+          <div id="anzeige">
             <h3>
               Termin am: {{ wunschTermin }} Uhr
             </h3>
           </div>
-          <div id="rechts">
-            <!-- <input type="hidden" name="appointment" v-model="wunschTermin"> -->
+          <div id="knopf">
+
             <button class="button" type="submit">Weiter</button>
             <!-- <button type="submit" @click="console.log('Button gedrückt!')">Weiter</button> -->
           </div>
@@ -146,16 +144,48 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
   form {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content:start;
+    gap: 64px;
+    align-items: top  ;
   }
+
+  form input {
+    visibility: hidden;
+  }
+
+  form label {
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    background-color: var(--hellgrün);
+    border-radius: 9px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: -13px;
+    cursor: pointer;
+  }
+
+  form label:hover {
+    background-color: var(--dunkelgrün);
+  }
+
+  form input:checked + label {
+    background-color: var(--gelb);
+  }
+
+  /* form input:has([type='radio']:checked) {
+    background-color: var(--gelb);
+  } */
+
+  #daypicker {
+    min-width: 320px;}
 
   #timepicker {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
+    background-color: var(--hellgrün);
   }
 
   .fuss {
@@ -164,7 +194,6 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid black;
     /* background-color: var(--hellgrün); */
   }  
   

@@ -178,4 +178,6 @@ Gespräch w/Chris
 CtkPicker.vue: 
 mit 2x3 Radiobuttons,
 rudimentäres Speichern
-
+#### Mi 17.07.2024
+Weiter-Button schön
+Styles von Melke
