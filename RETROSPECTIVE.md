@@ -181,3 +181,12 @@ rudimentäres Speichern
 #### Mi 17.07.2024
 Weiter-Button schön
 Styles von Melke
+#### Do 18.07.2024
+tsdav-docs V1
+Version 2
+Readme V1
+Version 2
+Proxy m/Ray
+### 14.Woche
+#### 22.07.2024
+Google Version
