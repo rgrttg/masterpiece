@@ -188,5 +188,13 @@ Readme V1
 Version 2
 Proxy m/Ray
 ### 14.Woche
-#### 22.07.2024
+#### Mo 22.07.2024
 Google Version
+#### Di 23.07.2024
+Howto Integrate Google Calendar API w/Laravel
+Part 1
+#### Mi 24.07.2024
+Part 2
+#### Do 25.07.2024
+Meeting w/Chris
+Files commit
