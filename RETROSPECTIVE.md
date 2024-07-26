@@ -198,3 +198,6 @@ Part 2
 #### Do 25.07.2024
 Meeting w/Chris
 Files commit
+#### Fr 26.07.2024
+Donwload ZIP
+Part 3
