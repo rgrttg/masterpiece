@@ -204,3 +204,13 @@ Part 3
 ### 15.Woche
 #### Mo 29.07.2024
 Part 4
+#### Di 30.07.2024
+Part 4 beendet
+(Phishing-Alarm)
+#### Mi 31.07.2024
+Recherche git branch
+Meeting w/Sara
+#### Do 01.08.2024
+Feiertag
+#### Fr 02.08.2024
+Class Google_Service_Oauth2 not found
