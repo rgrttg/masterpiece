@@ -214,3 +214,8 @@ Meeting w/Sara
 Feiertag
 #### Fr 02.08.2024
 Class Google_Service_Oauth2 not found
+### 16.Woche
+#### Mo 05.08.2024
+Callback nach Consentscreen
+#### Di 06.08.2024
+Alles auf Anfang
