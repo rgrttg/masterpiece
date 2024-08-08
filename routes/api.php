@@ -11,6 +11,8 @@ use App\Http\Controllers\TokenController;
 
 use App\Http\Controllers\UserController;
 
+use Spatie\GoogleCalendar\Event;
+
 Route::post('/sanctum/token', TokenController::class);
 
 // DEVS
@@ -29,4 +31,12 @@ Route::post('/new-client', [ClientController::class, 'store']);
  */
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/users/auth', [UserController::class, 'show']);
+});
+
+Route::get('/calendar', function(){
+    $event = new Event();
+    $event->name = 'Test Event';
+    $event->startDateTime = Carbon\Carbon::now();
+    $event->endDateTime = Carbon\Carbon::now()->addHour();
+    $event->save();
 });
