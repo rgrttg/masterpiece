@@ -218,4 +218,11 @@ Class Google_Service_Oauth2 not found
 #### Mo 05.08.2024
 Callback nach Consentscreen
 #### Di 06.08.2024
-Alles auf Anfang
+Alles auf Anfang, nein doch nicht.
+Callback in .env geswitcht
+#### Mi 07.08.2024
+Debugging
+id_token gesucht
+#### Do 08.08.2024
+id_token hard codiert
+refresh_token fehlt
