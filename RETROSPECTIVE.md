@@ -232,3 +232,5 @@ Regenerations-Tag (Kopfweh)
 #### Sa 10.08.2024
 merge spatie
 Favicon.ico in public kopiert
+Textform weiblich
+max-date aktualisiert
