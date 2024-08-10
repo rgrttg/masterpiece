@@ -8,8 +8,8 @@
     <div id="text">
       <h2>IK-K Integrative Kinesiologie Kalbermatter</h2>
       <h3>Hi, ich bin Claudia Kalbermatter</h3>
-      <h4>Kinesiologe mit Herz und Humor</h4>
-      <div>Als Diplomierter Kinesiologe und Stress-Experte helfe ich Dir, Kindern und Erwachsenen, mit den 
+      <h4>Kinesiologin mit Herz und Humor</h4>
+      <div>Als Diplomierte Kinesiologin und Stress-Expertin helfe ich Dir, Kindern und Erwachsenen, mit den 
         täglichen Herausforderungen in Schule, Beruf, Alltag, in Beziehungen, Krankheiten und persönlichen 
         Krisen angemessen klar zu kommen.</div>
         <a role="button" class="button" href="termin-wahl" >Hier Termin buchen</a>

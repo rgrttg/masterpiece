@@ -83,8 +83,8 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
           :firstDayOfWeek=1
           :noWeekendsDays=true
           :min-date=today
-          max-date="2024-07-30"
-          :disabled-weekly=[4]
+          max-date="2024-09-30"
+          :disabled-weekly=[]
           :only-date=true
           
           :disabled-hours="['00', '01', '02', '03', '04', '05', '06', '07', '08', 
