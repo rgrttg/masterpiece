@@ -226,3 +226,9 @@ id_token gesucht
 #### Do 08.08.2024
 id_token hard codiert
 refresh_token fehlt
+Spatie/laravel-google-calendar w/Ray in 40' integriert!
+#### Fr 09.08.2024
+Regenerations-Tag (Kopfweh)
+#### Sa 10.08.2024
+merge spatie
+Favicon.ico in public kopiert
