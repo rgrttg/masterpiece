@@ -234,3 +234,6 @@ merge spatie
 Favicon.ico in public kopiert
 Textform weiblich
 max-date aktualisiert
+### 17.Woche
+#### Mo 12.08.2024
+Props und date
