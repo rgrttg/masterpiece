@@ -190,7 +190,8 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--hellgrün);
+    /* background-color: var(--hellgrün); */
+    background-color: #fff;
     min-width: 320px;
   }
 
