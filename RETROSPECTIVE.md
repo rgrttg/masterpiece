@@ -237,3 +237,8 @@ max-date aktualisiert
 ### 17.Woche
 #### Mo 12.08.2024
 Props und date
+#### Di 13.08.2024
+Frei Lego-Tag mit Gross-Neffe
+#### Mi 14.08.2024
+Trello
+h2 margin

@@ -138,9 +138,13 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
 <style scoped>
   #picker-card {
     width: 800px;
-    margin: 10px auto;
+    margin: 0px auto;
   }
 
+  h2 {
+    margin: 10px auto;
+  }
+  
   form {
     display: flex;
     flex-direction: row;
