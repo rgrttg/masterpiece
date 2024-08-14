@@ -144,12 +144,12 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
   h2 {
     margin: 10px auto;
   }
-  
+
   form {
     display: flex;
     flex-direction: row;
-    justify-content:start;
-    gap: 64px;
+    justify-content: space-between;
+    /* gap: 64px; */
     align-items: top  ;
   }
 
@@ -182,7 +182,8 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
   } */
 
   #daypicker {
-    min-width: 320px;}
+    min-width: 320px;
+  }
 
   #timepicker {
     display: flex;
@@ -190,6 +191,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     justify-content: space-between;
     align-items: center;
     background-color: var(--hellgrün);
+    min-width: 320px;
   }
 
   .fuss {

@@ -242,3 +242,4 @@ Frei Lego-Tag mit Gross-Neffe
 #### Mi 14.08.2024
 Trello
 h2 margin
+width 320 space-between
