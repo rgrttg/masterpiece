@@ -251,3 +251,5 @@ Gleichmässiger Abstand zwischen den Zeit-Buttons
 Zeit-Anzeige
 Weiter-Button wie Heute-Button
 Graue Linie
+function anzeigeDatum
+function anzeigeZeit

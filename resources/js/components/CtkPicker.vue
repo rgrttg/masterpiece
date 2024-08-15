@@ -25,20 +25,20 @@ defineComponent({
     // const today = new Date().toLocaleDateString('de-CH')
     const today = new Date().toISOString().slice(0, 10)
     console.log("today: " + today)
-    const wunschTermin = ref(today)
-    console.log("value: " + wunschTermin.value)
+    const wunschTag = ref(today)
+    console.log("value: " + wunschTag.value)
 
     const response = ref('')
     // [Vue warn]: inject() can only be used inside setup() or functional components.
     const router = useRouter()
 
-    const time = ref('15:00:00')
+    const wunschZeit = ref('15:00:00')
 
 const handleSubmit = async() => {
   console.log("Enter handleSubmit")
-  console.log("Time: " + time.value)
+  console.log("Time: " + wunschZeit.value)
   try {
-  const startDayTime = wunschTermin.value + " " + time.value
+  const startDayTime = wunschTag.value + " " + wunschZeit.value
   // TODO: Endzeit auf 1 Stunde später setzen
   const finishDayTime = startDayTime
     alert('Speichere Termin von: ' + startDayTime + ' bis: ' + finishDayTime)
@@ -59,10 +59,29 @@ const handleSubmit = async() => {
   }
 };
 
+function anzeigeDatum(date) {
+  return new Intl.DateTimeFormat('de-CH', {
+    day: 'numeric',
+    month: 'numeric',
+    year: 'numeric'
+  }).format(new Date(date))
+}
+
+function anzeigeZeit(date, time) {
+  const [hours, minutes] = time.split(':')
+  const dateTime = new Date(date)
+  dateTime.setHours(hours)
+  dateTime.setMinutes(minutes)
+  return new Intl.DateTimeFormat('de-CH', {
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: false
+  }).format(dateTime).replace(':', '.')
+}
 </script>
+
 <!-- Datepicker Komponente mit einer Auswahl der Tage.
 Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
-
 <template>
   <div id="picker-card">
     <h2>
@@ -72,7 +91,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     <form action="" method="POST" @submit.prevent="handleSubmit">
       <div id="daypicker">
         <!-- [Vue warn]: Invalid prop: type check failed for prop "inline". Expected Boolean, got String with value "true".  -->
-        <vue-ctk-date-time-picker v-model="wunschTermin" 
+        <vue-ctk-date-time-picker v-model="wunschTag" 
           :inline=true
           color="#9CBC64"
           button-color="#9CBC64"
@@ -104,14 +123,14 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
           <table>
             <tr>
               <!--                                        <label for="fname">First name:</label> -->
-              <td><input id="radio1" type="radio" v-model="time" value="09:00:00" ><label for="radio1">09.00</label></td>
-              <td><input id="radio2" type="radio" v-model="time" value="10:30:00" ><label for="radio2">10.30</label></td>
-              <td><input id="radio3" type="radio" v-model="time" value="13:30:00" ><label for="radio3">13.30</label></td>
+              <td><input id="radio1" type="radio" v-model="wunschZeit" value="09:00:00" ><label for="radio1">09.00</label></td>
+              <td><input id="radio2" type="radio" v-model="wunschZeit" value="10:30:00" ><label for="radio2">10.30</label></td>
+              <td><input id="radio3" type="radio" v-model="wunschZeit" value="13:30:00" ><label for="radio3">13.30</label></td>
             </tr>
             <tr>
-              <td><input id="radio4" type="radio" v-model="time" value="15:00:00" ><label for="radio4">15.00</label></td>
-              <td><input id="radio5" type="radio" v-model="time" value="16:30:00" ><label for="radio5">16.30</label></td>
-              <td><input id="radio6" type="radio" v-model="time" value="18:00:00" ><label for="radio6">18.00</label></td>
+              <td><input id="radio4" type="radio" v-model="wunschZeit" value="15:00:00" ><label for="radio4">15.00</label></td>
+              <td><input id="radio5" type="radio" v-model="wunschZeit" value="16:30:00" ><label for="radio5">16.30</label></td>
+              <td><input id="radio6" type="radio" v-model="wunschZeit" value="18:00:00" ><label for="radio6">18.00</label></td>
             </tr>
           </table>
         </div>
@@ -121,8 +140,8 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
         <div class="fuss">
           <div id="anzeige">
             <h3>
-              Termin am: {{ wunschTermin }}<br>
-              um: {{ time }} Uhr
+              Termin am: {{ anzeigeDatum(wunschTag) }}<br>
+              um: {{ anzeigeZeit(wunschTag, wunschZeit) }} Uhr
             </h3>
           </div>
           <div id="knopf">
