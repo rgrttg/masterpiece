@@ -121,7 +121,8 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
         <div class="fuss">
           <div id="anzeige">
             <h3>
-              Termin am: {{ wunschTermin }} Uhr
+              Termin am: {{ wunschTermin }}<br>
+              um: {{ time }} Uhr
             </h3>
           </div>
           <div id="knopf">
@@ -165,7 +166,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     border-radius: 9px;
     text-align: center;
     line-height: 40px;
-    margin-left: -13px;
+    margin-left: -19px;
     cursor: pointer;
   }
 
@@ -193,6 +194,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     /* background-color: var(--hellgrün); */
     background-color: #fff;
     min-width: 320px;
+    padding-top: 32px;
   }
 
   .fuss {

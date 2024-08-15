@@ -245,3 +245,7 @@ h2 margin
 Grösserer Abstand der Picker
 Gleiche Grösse der Picker
 Gleiche Farbe der Picker
+#### Do 15.08.2024
+Meeting w/Chris
+Gleichmässiger Abstand zwischen den Zeit-Buttons
+Zeit-Anzeige
