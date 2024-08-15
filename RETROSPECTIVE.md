@@ -249,3 +249,5 @@ Gleiche Farbe der Picker
 Meeting w/Chris
 Gleichmässiger Abstand zwischen den Zeit-Buttons
 Zeit-Anzeige
+Weiter-Button wie Heute-Button
+Graue Linie
