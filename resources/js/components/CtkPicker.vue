@@ -32,7 +32,7 @@ defineComponent({
     // [Vue warn]: inject() can only be used inside setup() or functional components.
     const router = useRouter()
 
-    const time = ref('18:00:00')
+    const time = ref('15:00:00')
 
 const handleSubmit = async() => {
   console.log("Enter handleSubmit")
@@ -127,7 +127,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
           </div>
           <div id="knopf">
 
-            <button class="button" type="submit">Weiter</button>
+            <button class="pickerButton" type="submit">Weiter</button>
             <!-- <button type="submit" @click="console.log('Button gedrückt!')">Weiter</button> -->
           </div>
         </div>
@@ -195,6 +195,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     background-color: #fff;
     min-width: 320px;
     padding-top: 32px;
+    border-radius: 3px;
   }
 
   .fuss {
@@ -206,6 +207,33 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
     /* background-color: var(--hellgrün); */
   }  
   
+  #knopf {
+    padding: 5px;
+    border: 1px solid var(--hellgrün);
+    border-radius: 4px;
+    width: 308px;
+  }
+  
+  .pickerButton {
+    padding: 0 20px;
+    /* position: relative; */
+    background-color: var(--hellgrün);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    height: 30px;
+    font-size: 14px;
+    /* outline: none; */
+    cursor: pointer;
+    /* -webkit-transition: all .25s cubic-bezier(.645,.045,.355,1); */
+    color : var(--dunkelgrün);
+    font-weight: 500;
+  }
+
+  .pickerButton:hover {
+    background-color: var(--dunkelgrün);
+    color: white;
+  }
+
   :deep(.header-picker) {
     background-color: var(--dunkelgrün) !important;
   }  
