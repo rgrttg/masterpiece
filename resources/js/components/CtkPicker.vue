@@ -39,12 +39,12 @@ const handleSubmit = async() => {
   console.log("Time: " + wunschZeit.value)
   try {
   const startDayTime = wunschTag.value + " " + wunschZeit.value
-  // TODO: Endzeit auf 1 Stunde später setzen
-  const finishDayTime = startDayTime
+  // Endzeit auf 1 Stunde später setzen
+  const finishDayTime = setFinishDayTime(wunschTag.value, wunschZeit.value)
     alert('Speichere Termin von: ' + startDayTime + ' bis: ' + finishDayTime)
     response.value = axios.post('/api/new-appointment', {
         employeeId: 1,
-        status: 'Output Format geändert',
+        status: 'Endzeit auf 1 Stunde später gesetzt',
         clientId: 3,
         startTime: startDayTime,
         finishTime: finishDayTime,
@@ -77,6 +77,17 @@ function anzeigeZeit(date, time) {
     minute: '2-digit',
     hour12: false
   }).format(dateTime).replace(':', '.')
+}
+
+function setFinishDayTime(date, time) {
+  const [hours, minutes] = time.split(':')
+  const dateTime = new Date(date + 'T' + time)
+  // wandle string in number um
+  const utcHour = Number(hours)
+  dateTime.setUTCHours(utcHour + 1)
+  dateTime.setMinutes(minutes)
+  // Gibt das Datum und die Zeit im Format "YYYY-MM-DD HH:mm:ss" zurück
+  return dateTime.toISOString().slice(0, 19).replace('T', ' ')
 }
 </script>
 

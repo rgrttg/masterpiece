@@ -253,3 +253,5 @@ Weiter-Button wie Heute-Button
 Graue Linie
 function anzeigeDatum
 function anzeigeZeit
+#### Fr 16.08.2024
+function setFinishDayTime
