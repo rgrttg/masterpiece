@@ -35,10 +35,12 @@ class AppointmentController extends Controller
         ]);
         
         // Speichere den Termin auch im Google Kalender
+        // 8-ung: $request Lokalzeit
+        // 8-ung: $event UTC
         $event = new Event();
         $event->name = $request->status;
-        $event->startDateTime = Carbon\Carbon::now();
-        $event->endDateTime = Carbon\Carbon::now()->addHour();
+        $event->startDateTime = new Carbon\Carbon($request->startTime);
+        $event->endDateTime = new Carbon\Carbon($request->finishTime);
         $event->save();
 
         // gib den Termin zurück

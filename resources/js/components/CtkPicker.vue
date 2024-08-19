@@ -44,7 +44,7 @@ const handleSubmit = async() => {
     alert('Speichere Termin von: ' + startDayTime + ' bis: ' + finishDayTime)
     response.value = axios.post('/api/new-appointment', {
         employeeId: 1,
-        status: 'Termin in Google Kalender speichern mit Carbon now()',
+        status: 'Speichere mit new Carbon()',
         clientId: 4,
         startTime: startDayTime,
         finishTime: finishDayTime,
