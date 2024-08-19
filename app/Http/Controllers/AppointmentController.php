@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Appointment;
+use Spatie\GoogleCalendar\Event;
+use Carbon;
 
 class AppointmentController extends Controller
 {
@@ -32,6 +34,13 @@ class AppointmentController extends Controller
             'employee_id' => $request->employeeId
         ]);
         
+        // Speichere den Termin auch im Google Kalender
+        $event = new Event();
+        $event->name = $request->status;
+        $event->startDateTime = Carbon\Carbon::now();
+        $event->endDateTime = Carbon\Carbon::now()->addHour();
+        $event->save();
+
         // gib den Termin zurück
         return response()->json($appointment, 201);
     }

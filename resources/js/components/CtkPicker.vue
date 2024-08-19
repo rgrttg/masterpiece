@@ -35,8 +35,8 @@ defineComponent({
     const wunschZeit = ref('15:00:00')
 
 const handleSubmit = async() => {
-  console.log("Enter handleSubmit")
-  console.log("Time: " + wunschZeit.value)
+  // console.log("Enter handleSubmit")
+  console.log("WunschZeit: " + wunschZeit.value)
   try {
   const startDayTime = wunschTag.value + " " + wunschZeit.value
   // Endzeit auf 1 Stunde später setzen
@@ -44,8 +44,8 @@ const handleSubmit = async() => {
     alert('Speichere Termin von: ' + startDayTime + ' bis: ' + finishDayTime)
     response.value = axios.post('/api/new-appointment', {
         employeeId: 1,
-        status: 'Endzeit auf 1 Stunde später gesetzt',
-        clientId: 3,
+        status: 'Termin in Google Kalender speichern mit Carbon now()',
+        clientId: 4,
         startTime: startDayTime,
         finishTime: finishDayTime,
     })
