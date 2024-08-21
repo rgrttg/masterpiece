@@ -259,3 +259,7 @@ function setFinishDayTime
 #### Mo 19.08.2024
 AppointmentController mit Google Calendar/Carbon
 new Carbon($request)
+#### Di 20.08.2024
+online-reservation.ch bestellt
+#### Mi 21.08.2024
+online-reservation.ch konfigurieren

@@ -1,0 +1,147 @@
+{
+  "_AppFooter-!~{00a}~.js": {
+    "file": "assets/AppFooter-CH6Ajgkt.css",
+    "src": "_AppFooter-!~{00a}~.js"
+  },
+  "_AppFooter-BntV8tn0.js": {
+    "file": "assets/AppFooter-BntV8tn0.js",
+    "name": "AppFooter",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/AppFooter-CH6Ajgkt.css"
+    ],
+    "assets": [
+      "assets/logo-8aIDWQ_E.png"
+    ]
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-BTWcuxQN.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/img/Image-300x300.jpg": {
+    "file": "assets/Image-300x300-Bd2e9e1H.jpg",
+    "src": "resources/img/Image-300x300.jpg"
+  },
+  "resources/img/logo.png": {
+    "file": "assets/logo-8aIDWQ_E.png",
+    "src": "resources/img/logo.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-Bf6d-8Iy.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/pages/Home.vue",
+      "resources/js/pages/Auth/Login.vue",
+      "resources/js/pages/Dashboard.vue",
+      "resources/js/pages/Home.vue",
+      "resources/js/pages/TerminWahl.vue",
+      "resources/js/pages/BuchungDetails.vue",
+      "resources/js/pages/BuchungErfolgreich.vue",
+      "resources/js/pages/TestSeite.vue"
+    ],
+    "css": [
+      "assets/app-BTWcuxQN.css"
+    ]
+  },
+  "resources/js/pages/Auth/Login.vue": {
+    "file": "assets/Login-B1p0MzNH.js",
+    "name": "Login",
+    "src": "resources/js/pages/Auth/Login.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/app-BTWcuxQN.css"
+    ]
+  },
+  "resources/js/pages/BuchungDetails.vue": {
+    "file": "assets/BuchungDetails-Cpd8M_GG.js",
+    "name": "BuchungDetails",
+    "src": "resources/js/pages/BuchungDetails.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AppFooter-BntV8tn0.js"
+    ],
+    "css": [
+      "assets/BuchungDetails-RTOB91MT.css",
+      "assets/app-BTWcuxQN.css"
+    ]
+  },
+  "resources/js/pages/BuchungErfolgreich.vue": {
+    "file": "assets/BuchungErfolgreich-CnDIiUtk.js",
+    "name": "BuchungErfolgreich",
+    "src": "resources/js/pages/BuchungErfolgreich.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AppFooter-BntV8tn0.js"
+    ],
+    "css": [
+      "assets/BuchungErfolgreich-CQor7nHe.css",
+      "assets/app-BTWcuxQN.css"
+    ]
+  },
+  "resources/js/pages/Dashboard.vue": {
+    "file": "assets/Dashboard-wOpjWoqE.js",
+    "name": "Dashboard",
+    "src": "resources/js/pages/Dashboard.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/app-BTWcuxQN.css"
+    ]
+  },
+  "resources/js/pages/Home.vue": {
+    "file": "assets/Home-DDPHFN-O.js",
+    "name": "Home",
+    "src": "resources/js/pages/Home.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AppFooter-BntV8tn0.js"
+    ],
+    "css": [
+      "assets/Home-B2p0N81D.css",
+      "assets/app-BTWcuxQN.css"
+    ],
+    "assets": [
+      "assets/Image-300x300-Bd2e9e1H.jpg"
+    ]
+  },
+  "resources/js/pages/TerminWahl.vue": {
+    "file": "assets/TerminWahl-B5z45aT1.js",
+    "name": "TerminWahl",
+    "src": "resources/js/pages/TerminWahl.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AppFooter-BntV8tn0.js"
+    ],
+    "css": [
+      "assets/TerminWahl-Jt5u-4Xn.css",
+      "assets/app-BTWcuxQN.css"
+    ]
+  },
+  "resources/js/pages/TestSeite.vue": {
+    "file": "assets/TestSeite-DcZqmNAA.js",
+    "name": "TestSeite",
+    "src": "resources/js/pages/TestSeite.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AppFooter-BntV8tn0.js"
+    ],
+    "css": [
+      "assets/app-BTWcuxQN.css"
+    ]
+  }
+}
