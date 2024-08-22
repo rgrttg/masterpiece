@@ -263,3 +263,5 @@ new Carbon($request)
 online-reservation.ch bestellt
 #### Mi 21.08.2024
 online-reservation.ch konfigurieren
+#### Do 22.08.2024
+credentials hochgeladen
