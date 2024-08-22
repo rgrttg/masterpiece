@@ -44,7 +44,7 @@ const handleSubmit = async() => {
     alert('Speichere Termin von: ' + startDayTime + ' bis: ' + finishDayTime)
     response.value = axios.post('/api/new-appointment', {
         employeeId: 1,
-        status: 'Speichere mit new Carbon()',
+        status: 'Ready for presentation',
         clientId: 4,
         startTime: startDayTime,
         finishTime: finishDayTime,

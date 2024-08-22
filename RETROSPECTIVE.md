@@ -265,3 +265,5 @@ online-reservation.ch bestellt
 online-reservation.ch konfigurieren
 #### Do 22.08.2024
 credentials hochgeladen
+Clients in DB eingefügt
+Test machen... POS

@@ -3,8 +3,8 @@
     "file": "assets/AppFooter-CH6Ajgkt.css",
     "src": "_AppFooter-!~{00a}~.js"
   },
-  "_AppFooter-BntV8tn0.js": {
-    "file": "assets/AppFooter-BntV8tn0.js",
+  "_AppFooter-se0itoh1.js": {
+    "file": "assets/AppFooter-se0itoh1.js",
     "name": "AppFooter",
     "imports": [
       "resources/js/app.js"
@@ -30,7 +30,7 @@
     "src": "resources/img/logo.png"
   },
   "resources/js/app.js": {
-    "file": "assets/app-Bf6d-8Iy.js",
+    "file": "assets/app-CVvQAv5m.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -49,7 +49,7 @@
     ]
   },
   "resources/js/pages/Auth/Login.vue": {
-    "file": "assets/Login-B1p0MzNH.js",
+    "file": "assets/Login-CSSNgZ2s.js",
     "name": "Login",
     "src": "resources/js/pages/Auth/Login.vue",
     "isDynamicEntry": true,
@@ -61,13 +61,13 @@
     ]
   },
   "resources/js/pages/BuchungDetails.vue": {
-    "file": "assets/BuchungDetails-Cpd8M_GG.js",
+    "file": "assets/BuchungDetails-q3_4aQt6.js",
     "name": "BuchungDetails",
     "src": "resources/js/pages/BuchungDetails.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AppFooter-BntV8tn0.js"
+      "_AppFooter-se0itoh1.js"
     ],
     "css": [
       "assets/BuchungDetails-RTOB91MT.css",
@@ -75,13 +75,13 @@
     ]
   },
   "resources/js/pages/BuchungErfolgreich.vue": {
-    "file": "assets/BuchungErfolgreich-CnDIiUtk.js",
+    "file": "assets/BuchungErfolgreich-DKa217Db.js",
     "name": "BuchungErfolgreich",
     "src": "resources/js/pages/BuchungErfolgreich.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AppFooter-BntV8tn0.js"
+      "_AppFooter-se0itoh1.js"
     ],
     "css": [
       "assets/BuchungErfolgreich-CQor7nHe.css",
@@ -89,7 +89,7 @@
     ]
   },
   "resources/js/pages/Dashboard.vue": {
-    "file": "assets/Dashboard-wOpjWoqE.js",
+    "file": "assets/Dashboard-Chz_SJeW.js",
     "name": "Dashboard",
     "src": "resources/js/pages/Dashboard.vue",
     "isDynamicEntry": true,
@@ -101,13 +101,13 @@
     ]
   },
   "resources/js/pages/Home.vue": {
-    "file": "assets/Home-DDPHFN-O.js",
+    "file": "assets/Home-BTapPGh9.js",
     "name": "Home",
     "src": "resources/js/pages/Home.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AppFooter-BntV8tn0.js"
+      "_AppFooter-se0itoh1.js"
     ],
     "css": [
       "assets/Home-B2p0N81D.css",
@@ -118,27 +118,27 @@
     ]
   },
   "resources/js/pages/TerminWahl.vue": {
-    "file": "assets/TerminWahl-B5z45aT1.js",
+    "file": "assets/TerminWahl-Yw2AX7QU.js",
     "name": "TerminWahl",
     "src": "resources/js/pages/TerminWahl.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AppFooter-BntV8tn0.js"
+      "_AppFooter-se0itoh1.js"
     ],
     "css": [
-      "assets/TerminWahl-Jt5u-4Xn.css",
+      "assets/TerminWahl-Cf51Rw1i.css",
       "assets/app-BTWcuxQN.css"
     ]
   },
   "resources/js/pages/TestSeite.vue": {
-    "file": "assets/TestSeite-DcZqmNAA.js",
+    "file": "assets/TestSeite-DBXCn2ND.js",
     "name": "TestSeite",
     "src": "resources/js/pages/TestSeite.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AppFooter-BntV8tn0.js"
+      "_AppFooter-se0itoh1.js"
     ],
     "css": [
       "assets/app-BTWcuxQN.css"
