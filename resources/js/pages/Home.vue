@@ -15,7 +15,7 @@ import AppFooter from '../components/AppFooter.vue';
     <!-- Main -->
     <main>
       <!-- Heading zentrieren -->
-      <h1>Deine Kinesiologie-Praxis in Hedingen und Urdorf</h1>
+      <h1>Deine Kinesiologie-Praxis in Zürich</h1>
 
       <MainCard />
     </main>

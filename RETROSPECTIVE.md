@@ -57,7 +57,7 @@ Figma Bestätigung
 #### Di 14.05.2024
 Users & Permissions,
 Storage Folder Permission Problem.
-Meetin w/Chris.
+Meeting w/Chris.
 Datenbase migration,
 Make Model Client: fillable gefüllt
 #### Mi 15.05.2024
@@ -267,3 +267,8 @@ online-reservation.ch konfigurieren
 credentials hochgeladen
 Clients in DB eingefügt
 Test machen... POS
+Vorbereiten
+Präsentation
+Meeting w/Chris
+Namenskonflikte lösen
+Bild gelöscht
