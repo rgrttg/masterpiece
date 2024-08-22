@@ -3,8 +3,8 @@
     "file": "assets/AppFooter-CH6Ajgkt.css",
     "src": "_AppFooter-!~{00a}~.js"
   },
-  "_AppFooter-se0itoh1.js": {
-    "file": "assets/AppFooter-se0itoh1.js",
+  "_AppFooter-pI7dzfqU.js": {
+    "file": "assets/AppFooter-pI7dzfqU.js",
     "name": "AppFooter",
     "imports": [
       "resources/js/app.js"
@@ -21,16 +21,16 @@
     "src": "resources/css/app.css",
     "isEntry": true
   },
-  "resources/img/Image-300x300.jpg": {
-    "file": "assets/Image-300x300-Bd2e9e1H.jpg",
-    "src": "resources/img/Image-300x300.jpg"
+  "resources/img/300x300.png": {
+    "file": "assets/300x300-CvedJKmT.png",
+    "src": "resources/img/300x300.png"
   },
   "resources/img/logo.png": {
     "file": "assets/logo-8aIDWQ_E.png",
     "src": "resources/img/logo.png"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CVvQAv5m.js",
+    "file": "assets/app-DsKBTTTv.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -49,7 +49,7 @@
     ]
   },
   "resources/js/pages/Auth/Login.vue": {
-    "file": "assets/Login-CSSNgZ2s.js",
+    "file": "assets/Login-DqwucB7f.js",
     "name": "Login",
     "src": "resources/js/pages/Auth/Login.vue",
     "isDynamicEntry": true,
@@ -61,13 +61,13 @@
     ]
   },
   "resources/js/pages/BuchungDetails.vue": {
-    "file": "assets/BuchungDetails-q3_4aQt6.js",
+    "file": "assets/BuchungDetails-ccBVFuSq.js",
     "name": "BuchungDetails",
     "src": "resources/js/pages/BuchungDetails.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AppFooter-se0itoh1.js"
+      "_AppFooter-pI7dzfqU.js"
     ],
     "css": [
       "assets/BuchungDetails-RTOB91MT.css",
@@ -75,13 +75,13 @@
     ]
   },
   "resources/js/pages/BuchungErfolgreich.vue": {
-    "file": "assets/BuchungErfolgreich-DKa217Db.js",
+    "file": "assets/BuchungErfolgreich-D3NikecU.js",
     "name": "BuchungErfolgreich",
     "src": "resources/js/pages/BuchungErfolgreich.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AppFooter-se0itoh1.js"
+      "_AppFooter-pI7dzfqU.js"
     ],
     "css": [
       "assets/BuchungErfolgreich-CQor7nHe.css",
@@ -89,7 +89,7 @@
     ]
   },
   "resources/js/pages/Dashboard.vue": {
-    "file": "assets/Dashboard-Chz_SJeW.js",
+    "file": "assets/Dashboard-Dzmk162U.js",
     "name": "Dashboard",
     "src": "resources/js/pages/Dashboard.vue",
     "isDynamicEntry": true,
@@ -101,30 +101,30 @@
     ]
   },
   "resources/js/pages/Home.vue": {
-    "file": "assets/Home-BTapPGh9.js",
+    "file": "assets/Home-Bz4foaGX.js",
     "name": "Home",
     "src": "resources/js/pages/Home.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AppFooter-se0itoh1.js"
+      "_AppFooter-pI7dzfqU.js"
     ],
     "css": [
-      "assets/Home-B2p0N81D.css",
+      "assets/Home-DyMnhKDY.css",
       "assets/app-BTWcuxQN.css"
     ],
     "assets": [
-      "assets/Image-300x300-Bd2e9e1H.jpg"
+      "assets/300x300-CvedJKmT.png"
     ]
   },
   "resources/js/pages/TerminWahl.vue": {
-    "file": "assets/TerminWahl-Yw2AX7QU.js",
+    "file": "assets/TerminWahl-DzkbUuJ_.js",
     "name": "TerminWahl",
     "src": "resources/js/pages/TerminWahl.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AppFooter-se0itoh1.js"
+      "_AppFooter-pI7dzfqU.js"
     ],
     "css": [
       "assets/TerminWahl-Cf51Rw1i.css",
@@ -132,13 +132,13 @@
     ]
   },
   "resources/js/pages/TestSeite.vue": {
-    "file": "assets/TestSeite-DBXCn2ND.js",
+    "file": "assets/TestSeite-omuTFkMw.js",
     "name": "TestSeite",
     "src": "resources/js/pages/TestSeite.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AppFooter-se0itoh1.js"
+      "_AppFooter-pI7dzfqU.js"
     ],
     "css": [
       "assets/app-BTWcuxQN.css"
