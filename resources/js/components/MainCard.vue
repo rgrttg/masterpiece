@@ -3,7 +3,7 @@
 <template>
   <div class="karte">
     <div>
-      <img id="foto" alt="Foto" src="../../img/300x300.png" width="300" height="300" />
+      <img id="foto" alt="Foto" src="../../img/image-300x300.png" width="300" height="300" />
     </div>
     <div id="text">
       <h2>IK Integrative Kinesiologie</h2>

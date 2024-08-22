@@ -271,4 +271,6 @@ Vorbereiten
 Präsentation
 Meeting w/Chris
 Namenskonflikte lösen
-Bild gelöscht
+Foto gelöscht
+App Titel geändert
+Foto ersetzt
