@@ -44,7 +44,7 @@ const handleSubmit = async() => {
     alert('Speichere Termin von: ' + startDayTime + ' bis: ' + finishDayTime)
     response.value = axios.post('/api/new-appointment', {
         employeeId: 1,
-        status: 'Ready for presentation',
+        status: 'Set max-date to november',
         clientId: 4,
         startTime: startDayTime,
         finishTime: finishDayTime,
@@ -113,7 +113,7 @@ Beim ersten Aufruf soll schon der heutige Tag ausgewählt sein. -->
           :firstDayOfWeek=1
           :noWeekendsDays=true
           :min-date=today
-          max-date="2024-09-30"
+          max-date="2024-11-30"
           :disabled-weekly=[]
           :only-date=true
           
